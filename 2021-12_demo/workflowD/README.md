@@ -11,7 +11,7 @@ effect?
 3. Why are serum kynurenine and tryptophan in COVID-19 patients
 anti-correlated?
 4. A patient has very high ferritin levels and a biotech contact says
-that metformin should lower ferritin. Can we determine why?
+that metformin may lower ferritin. Can we determine why?
 
 These queries were reverse-engineered from the neighborhood explorer
 tool that gives GUI access to (SPOKE)[https://spoke.rbvi.ucsf.edu/], and
