@@ -4,7 +4,7 @@ DILI (drug-induced liver injury) is a disease or condition with only one consens
 
 The intent of Workflow B is two-fold: 
 
-1. Suggest drugs for repurposing, along with evidence of biological plausibility -> DILIN clinical trial (steroids? prednisone?)
+1. Suggest drugs for repurposing, along with evidence of biological plausibility -> DILIN clinical trial
 
 - In natural language, one might ask *are there drugs that can be repurposed to treat phenotypes or traits or outcomes associated with DILI?*
 
