@@ -16,4 +16,18 @@ For reference, here is the [workflow mural board](https://app.mural.co/t/ncats30
 
 The workflow is structured as an initial three-hop TRAPI query that runs from input DiseaseOrPhenotypicFeature CURIE to DiseaseOrPhenotypicFeature to Gene to ChemicalSubstance (including approved drugs). A fourth hop then seeks clinical real-world evidence on whether any of the suggested approved drugs from (1) are used to treat the diseases or phenotypic features identified from the first hop, or whether they are used to treat other potentially related traits/diseases, or whether they are associated with adverse events. Note that the fourth hop can be executed as a separate one-hop TRAPI query, perhaps after SME review of findings from the initial three-hop TRAPI query, or as a looped fourth hop.
 
-Suggested input CURIES: DILI (MONDO:0005359), toxic liver disease with acute hepatitis (SNOMEDCT:197358007), chronic DILI (MESH:D056487), hospitalization (MESH:D006760), transplanted liver complication (NCIT:C26991).
+Suggested input CURIES for three- or four-hop TRAPI queries from DiseaseOrPhenotypicFeature:
+
+DILI - MONDO:0005359
+Toxic liver disease with acute hepatitis - SNOMEDCT:197358007
+Chronic DILI - MESH:D056487
+Hospitalization - MESH:D006760
+Transplanted liver complication - NCIT:C26991
+
+Suggested input CURIES for one-hop TRAPI query from Gene: Input genes:
+
+class I HLA-A - NCBIGene:3105
+class I HLA-B - NCBIGene:3106
+ERAP2 - NCBIGene:64167
+EXOC4 - NCBIGene:60412
+PTPN22 - NCBIGene:26191
