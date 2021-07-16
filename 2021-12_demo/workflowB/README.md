@@ -32,4 +32,4 @@ Suggested input CURIES for one-hop TRAPI query from Gene:
 * EXOC4 - NCBIGene:60412
 * PTPN22 - NCBIGene:26191
 
-*Note that Workflow B is being tested using [multihop.py](https://github.com/NCATS-Tangerine/icees-api-config/tree/master/cli), which is a script that Hao Xu wrote to chain together KPs and ARAs, such as KP1's output becomes KP2's input, etc. We are using this tool to troubleshoot the workflow, in terms of ARS and ARA debugging. Testing results can be found [here](https://drive.google.com/drive/folders/1sCA6iouNHOh9I4ivXrR6DCct6fGgXbXp?usp=sharing).*
+*Note that Workflow B is being tested using [multihop.py](https://github.com/NCATS-Tangerine/icees-api-config/tree/master/cli), which is a script that Hao Xu wrote to chain together KPs and ARAs, such that KP1's output becomes KP2's input, and so on. We are using this tool to troubleshoot the workflow, in terms of ARS and ARA debugging, and initiate evaluation of answers for scientific impact. Testing results can be found [here](https://drive.google.com/drive/folders/1sCA6iouNHOh9I4ivXrR6DCct6fGgXbXp?usp=sharing).*
