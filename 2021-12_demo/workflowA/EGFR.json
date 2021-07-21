@@ -1,3 +1,4 @@
+{"message":{"query_graph":
 {
   "nodes": {
     "n0": {
@@ -27,7 +28,10 @@
     }
   }
 }
+}
+}
 
+{"message":{"query_graph":
 {
   "nodes": {
     "n0": {
@@ -45,7 +49,9 @@
     "e0": {
       "subject": "n0",
       "object": "n1",
-      "predicates": "biolink:
+      "predicates": "biolink:XXXXXXXXXX"
     }
   }
+}
+}
 }
