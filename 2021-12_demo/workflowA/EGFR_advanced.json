@@ -12,7 +12,7 @@
                     "id":"biolink:highest_FDA_approval_status",
                     "name":"highest FDA approval status",
                     "operator":"==",
-                    "value":"regular approval`
+                    "value":"regular approval"
                 }
               ]
             },
