@@ -27,3 +27,25 @@
     }
   }
 }
+
+{
+  "nodes": {
+    "n0": {
+      "categories": [
+        "biolink:ChemicalSubstance"
+      ],
+      "name": "Chemical Substance"
+    },
+    "n1": {
+      "name": "EGFR",
+      "ids": ["NCBIGene:1956"]
+    }
+  },
+  "edges": {
+    "e0": {
+      "subject": "n0",
+      "object": "n1",
+      "predicates": "biolink:
+    }
+  }
+}
