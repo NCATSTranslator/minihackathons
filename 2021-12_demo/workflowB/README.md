@@ -24,6 +24,8 @@ Suggested input CURIES for three- or four-hop TRAPI queries from DiseaseOrPhenot
 * Hospitalization - MESH:D006760
 * Transplanted liver complication - NCIT:C26991
 
+[Node Normalizer equivalent identifiers](https://drive.google.com/file/d/1rtvBM7J3AQpYFbLZquG3UUC1Ck5h_lA1/view?usp=sharing)
+
 Suggested input CURIES for one-hop TRAPI query from Gene:
 
 * class I HLA-A - NCBIGene:3105
