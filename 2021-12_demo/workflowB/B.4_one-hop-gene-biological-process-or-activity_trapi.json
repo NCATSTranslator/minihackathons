@@ -1,0 +1,28 @@
+{
+  "message": {
+    "query_graph": {
+      "nodes": {
+        "n0": {
+          "categories": [
+            "biolink:GeneOrGeneProduct"
+          ],
+          "ids": ["NCBIGene:3105","NCBIGene:3106","NCBIGene:64167","NCBIGene:60412","NCBIGene:26191"]
+        },
+        "n1": {
+          "categories": [
+            "biolink:BiologicalProcessOrActivity"
+          ]
+        }
+      },
+      "edges": {
+        "e0": {
+          "predicates": [
+            "biolink:has_participant"
+          ],
+          "subject": "n1",
+          "object": "n0"
+        }
+      }
+    }
+  }
+}
