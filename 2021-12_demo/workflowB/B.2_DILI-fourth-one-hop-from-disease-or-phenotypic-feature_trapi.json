@@ -3,7 +3,7 @@
 		"query_graph": {
 			"nodes": {
 				"n0": {
-					"ids": ["CHEBI:23359"],
+					"ids": ["CHEBI:41879"],
 					"categories": [
 						"biolink:ChemicalSubstance"
 					]
