@@ -1,0 +1,16 @@
+,A.1_RHOBTB2,A.8_EGFR_simple,B.1a_DILI-three-hop-from-disease-or-phenotypic-feature_trapi,B.1b_DILI_three-hop-from-disease-or-phenotypic-feature_trapi,B.1c_DILI_three-hop-from-disease-or-phenotypic-feature_trapi,B.1d_DILI_three-hop-from-disease-or-phenotypic-feature_trapi,B.1e_DILI_three-hop-from-disease-or-phenotypic-feature_trapi,B.3_DILI-one-hop-from-genes,B.4_one-hop-gene-biological-process-or-activity_trapi,C.1_ChemSubstances_related_to_Disease,C.2_ChemSubstances_related_to_GeneSet,D.1_parkinsons-crohns,D.2_ssri-heart-disease,D.3_ssri-heart-disease-one-hop,D.4_tryptophan-kynurenine-with-curie,D.5_tryptophan-kynurenine,D.6_metformin-ferritin,EGFR_advanced
+ara-aragorn,Error,Error,No Results,Error,Error,Error,Error,Error,Error,Error,Error,Error,Error,Error,Error,Error,Error,Error
+ara-arax,Results,Results,Results,Error,No Results,No Results,No Results,Results,Results,Results,Error,Results,Results,Error,Error,Error,Error,Error
+ara-bte,Results,No Results,No Results,No Results,No Results,No Results,No Results,No Results,No Results,Results,Error,Error,Results,Error,Error,Error,Error,No Results
+ara-unsecret,No Results,Results,No Results,No Results,No Results,Error,No Results,Results,No Results,Error,Error,Error,Error,Results,No Results,Results,Results,No Results
+kp-genetics,No Results,No Results,Error,Error,Error,Error,Error,No Results,No Results,No Results,Error,Error,Error,No Results,Error,Error,Error,No Results
+kp-molecular,No Results,No Results,Error,Error,Error,Error,Error,Results,No Results,Results,Error,Error,Error,No Results,Error,Error,Error,No Results
+ara-explanatory,No Results,No Results,No Results,No Results,No Results,No Results,No Results,No Results,No Results,Results,No Results,No Results,No Results,No Results,No Results,No Results,No Results,No Results
+ara-improving,Results,ARS Error,ARS Error,ARS Error,ARS Error,ARS Error,ARS Error,ARS Error,ARS Error,Results,Error,Results,Results,Results,Results,Results,Results,ARS Error
+kp-cam,No Results,No Results,No Results,No Results,No Results,No Results,No Results,Results,Results,No Results,No Results,Error,Error,No Results,Error,Error,No Results,No Results
+kp-textmining,No Results,No Results,No Results,No Results,No Results,No Results,No Results,No Results,No Results,No Results,No Results,Error,No Results,Error,Error,Error,Error,No Results
+kp-openpredict,Error,Error,Error,Error,No Results,No Results,No Results,No Results,No Results,No Results,No Results,No Results,No Results,No Results,No Results,No Results,No Results,No Results
+kp-cohd,Error,Error,Error,Error,Error,Error,Error,ARS Error,Error,Error,Error,Error,Error,Results,Error,Error,Error,Error
+kp-chp,No Results,No Results,No Results,No Results,No Results,No Results,No Results,No Results,No Results,No Results,No Results,No Results,No Results,No Results,No Results,No Results,No Results,No Results
+kp-icees,No Results,No Results,ARS Error,ARS Error,Error,Error,Error,Error,Error,Error,Error,Error,Error,Error,Error,Error,Error,No Results
+kp-icees-dili,No Results,No Results,ARS Error,ARS Error,Error,Error,ARS Error,Error,No Results,Error,Error,Error,Error,Error,Error,Error,Error,No Results
