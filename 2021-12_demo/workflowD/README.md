@@ -17,4 +17,4 @@ that metformin may lower ferritin. Can we determine why?
 These queries were reverse-engineered from the neighborhood explorer
 tool that gives GUI access to (SPOKE)[https://spoke.rbvi.ucsf.edu/], and
 may need to be broken down into step-wise queries for a realistic
-Translator workflow since there is no operation yet to "connect the dots witout specfyied qgraph struture"
+Translator workflow since there is no operation yet to "connect the dots witout specified qgraph structure"
