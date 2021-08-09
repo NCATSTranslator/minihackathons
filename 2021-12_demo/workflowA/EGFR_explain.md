@@ -24,7 +24,7 @@ The purpose of the EGFR workflow is to help a clinician find candidate drugs to 
               ]
             },
             "n1": {
-            #This is where we specify the gene of interest
+            #This is where we specify the gene of interest. We know that EGFR is causal for our disease of interest.
               "name": "EGFR",
               "ids": ["NCBIGene:1956"]
             }
