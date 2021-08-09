@@ -1,5 +1,5 @@
 # Purpose
-The purpose of the EGFR workflow is to help a clinician find candidate drugs to treat X diseases caused by an overactive EGFR gene. This query came to us by way of UAB's Precision Medicine Institute.
+The purpose of the EGFR workflow is to help a clinician find candidate drugs to treat neonatal inflammatory skin and bowel diseases caused by an overactive EGFR gene. Neonatal inflammatory skin and bowel disease is a rare, life-threatening, autoinflammatory syndrome with immune deficiency disorder characterized by early-onset, life-long inflammation affecting the skin and bowel and is associated with recurrent infections. This query came to us by way of UAB's Precision Medicine Institute.
 
 # Query Notes
 ```
