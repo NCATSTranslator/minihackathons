@@ -43,3 +43,5 @@ Suggested input CURIES for one-hop TRAPI query from Gene, structured as biolink:
 * ERAP2 - NCBIGene:64167
 * EXOC4 - NCBIGene:60412
 * PTPN22 - NCBIGene:26191
+
+*Note that the alternative workflow (or a variation of it) was suggested during the May 2021 relay meeting, perhaps as an entry path into the main workflow. As it addresses a different question than the main workflow, I'm not entirely sure how to weave it into the narrative for the December demo, but I think this issue will resolve naturally when we dive a bit deeper into answers.*
