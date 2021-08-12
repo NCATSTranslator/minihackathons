@@ -4,9 +4,9 @@
           "nodes": {
             "n0": {
               "categories": [
-                "biolink:ChemicalSubstance"
+                "biolink:SmallMolecule"
               ],
-              "name": "Chemical Substance"
+              "name": "Small Molecule"
             },
             "n1": {
               "name": "EGFR",
