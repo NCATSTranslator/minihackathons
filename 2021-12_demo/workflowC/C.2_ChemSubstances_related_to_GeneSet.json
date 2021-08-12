@@ -7,14 +7,14 @@
                 },
                 "n1": {
                     "ids": ["CHEBI:45783"],
-                    "categories": ["biolink:ChemicalSubstance"]
+                    "categories": ["biolink:SmallMolecule"]
                 },
                 "n2": {
                     "ids": ["MONDO:0005301"],
                     "categories": ["biolink:Disease"]
                 },
                 "n3": {
-                    "categories": ["biolink:ChemicalSubstance"]
+                    "categories": ["biolink:SmallMolecule"]
                 }
             },
             "edges": {
