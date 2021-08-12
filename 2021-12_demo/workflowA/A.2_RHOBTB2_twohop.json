@@ -7,7 +7,7 @@
                     "subject": "n1",
                     "predicates": [
                         "biolink:entity_regulates_entity"
-                    ],                
+                    ]},                
                 "e02": {
                     "object": "n1",
                     "subject": "n2",
