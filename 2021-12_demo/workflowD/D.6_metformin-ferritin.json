@@ -4,7 +4,7 @@
       "nodes": {
         "n0": {
           "ids": ["CHEMBL.COMPOUND:CHEMBL1431"],
-          "categories": ["biolink:ChemicalSubstance"]
+          "categories": ["biolink:SmallMolecule"]
         },
         "n1": {
           "categories": ["biolink:Protein"]

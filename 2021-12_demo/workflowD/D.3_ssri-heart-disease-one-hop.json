@@ -17,7 +17,7 @@
             "DRUGBANK:DB00715",
             "DRUGBANK:DB01104"
           ],
-          "categories": ["biolink:ChemicalSubstance"]
+          "categories": ["biolink:SmallMolecule"]
         },
         "n01": {
           "ids": ["DOID:114"],

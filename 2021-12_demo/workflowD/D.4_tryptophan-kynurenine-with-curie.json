@@ -22,7 +22,7 @@
         "nodes": {
           "n00": {
             "ids": ["DRUGBANK:DB00150"],
-            "categories": ["biolink:ChemicalSubstance"]
+            "categories": ["biolink:SmallMolecule"]
           },
           "n01": {
             "categories": ["biolink:Protein"]
@@ -35,7 +35,7 @@
           },
           "n04": {
             "ids": ["KEGG.COMPOUND:C02700"],
-            "categories": ["biolink:ChemicalSubstance"]
+            "categories": ["biolink:SmallMolecule"]
           }
         }
       }
