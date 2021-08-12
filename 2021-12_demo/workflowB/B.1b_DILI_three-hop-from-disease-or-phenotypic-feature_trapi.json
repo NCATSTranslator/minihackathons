@@ -13,7 +13,7 @@
                     "categories": ["biolink:Gene"]
                 },
                 "n3": {
-                    "categories": ["biolink:SmallMolecule"]
+                    "categories": ["biolink:ChemicalEntity"]
                 }
             },
             "edges": {
@@ -30,7 +30,7 @@
                 "e03": {
                     "subject": "n2",
                     "object": "n3",
-                    "predicates": ["biolink:related_to"]
+                    "predicates": ["biolink:has_real_world_evidence_of_association_with"]
                 }
             }
         }
