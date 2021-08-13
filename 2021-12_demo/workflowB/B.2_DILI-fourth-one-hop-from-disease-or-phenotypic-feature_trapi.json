@@ -5,7 +5,7 @@
 				"n0": {
 					"ids": ["CHEBI:41879"],
 					"categories": [
-						"biolink:SmallMolecule"
+						"biolink:ChemicalEntity"
 					]
 				},
 				"n1": {
@@ -18,7 +18,7 @@
 				"e0": {
 					"subject": "n0",
 					"object": "n1",
-					"predicates": ["related_to"]
+					"predicates": ["has_real_world_evidence_of_association_with"]
 				}
 			}
 		}

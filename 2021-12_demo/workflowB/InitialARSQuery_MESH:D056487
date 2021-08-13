@@ -13,14 +13,14 @@
                     "categories": ["biolink:Gene"]
                 },
                 "n3": {
-                    "categories": ["biolink:ChemicalEntity"]
+                    "categories": ["biolink:ChemicalSubstance"]
                 }
             },
             "edges": {
                 "e01": {
                     "subject": "n0",
                     "object": "n1",
-                    "predicates": ["biolink:has_real_world_evidencee_of_association_with"]
+                    "predicates": ["biolink:correlated_with"]
                 },
                 "e02": {
                     "subject": "n2",
@@ -30,10 +30,9 @@
                 "e03": {
                     "subject": "n2",
                     "object": "n3",
-                    "predicates": ["biolink:interacts_with"]
+                    "predicates": ["biolink:related_to"]
                 }
             }
         }
     }
 }
-
