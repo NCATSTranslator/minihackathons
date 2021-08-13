@@ -32,6 +32,8 @@ Suggested input CURIES for three-hop TRAPI queries from DiseaseOrPhenotypicFeatu
 
 *Note that Workflow B was tested using [multihop.py](https://github.com/NCATS-Tangerine/icees-api-config/tree/master/cli), which is a script that Hao Xu wrote to chain together KPs and ARAs, such that KP1's output becomes KP2's input, and so on. We used this tool to troubleshoot the workflow, in terms of ARA and KP debugging, and initiate evaluation of answers for scientific impact, given timeout issues related to the ARS. Testing results can be found [here](https://drive.google.com/drive/folders/1sCA6iouNHOh9I4ivXrR6DCct6fGgXbXp?usp=sharing). Note that the testing was extremely useful and surfaced multiple issues, since resolved. We are now testing the workflow via direct ARA query. We are also exploring the use of alternative node categories to replace biolink:Gene, for instance, biolink:BiologicalProcessOrActivity. The intent here is to determine whether the use of less common categories addresses the timeout issue.*
 
+*A successful ARS three-hop query using MESH:D056487 can be accessed using PK = f02e762d-de0d-4069-935c-a6ed821998ac.*
+
 ### Related Workflow
 
 Related to the above workflow, this workflow aims to explore biological mechanisms that might explain for the few genes (see list below) that are known or suspected to play a causal role in DILI. In natural language, one might ask *what biological mechanisms might explain the causal relationship between GeneX and DILI?* In this sense, the alternative workflow might be considered an "explain" workflow.
