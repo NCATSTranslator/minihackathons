@@ -1,6 +1,6 @@
 # Workflow B: DILI Drug Repurposing
 
-DILI (drug-induced liver injury) is the outcome of a drug exposure in rare patients with heightened sensitivity to drug-related hepatic sequalea. Drugs account for 20-40% of all instances of fulminant hepatic failure, and drug-induced hepatic injury is the most common cited reason for withdrawal of an approved drug from the market.
+DILI (drug-induced liver injury) is the outcome of a drug exposure in rare patients with heightened sensitivity to drug-related hepatic sequela. Drugs account for 20-40% of all instances of fulminant hepatic failure, and drug-induced hepatic injury is the most common cited reason for withdrawal of an approved drug from the market.
 
 DILI has only one consensus treatment: discontinuation of the causal agent. While DILI may resolve after the causal agent is discontinued, complete resolution may require months or years and, in many cases, the condition deterioriates before resolving and/or becomes chronic. Moreover, DILI is associated with high healthcare costs and high morbidity and mortality, often leading to hospitalization, liver transplant, and other poor outcomes.
 
