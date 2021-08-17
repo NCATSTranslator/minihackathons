@@ -22,7 +22,7 @@
         "nodes": {
           "n00": {
             "ids": ["DRUGBANK:DB00150"],
-            "categories": ["biolink:ChemicalSubstance"]
+            "categories": ["biolink:SmallMolecule"]
           },
           "n01": {
             "categories": ["biolink:Protein"]
@@ -34,7 +34,7 @@
             "categories": ["biolink:MolecularActivity"]
           },
           "n04": {
-            "categories": ["biolink:ChemicalSubstance"]
+            "categories": ["biolink:SmallMolecule"]
           }
         }
       }

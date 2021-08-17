@@ -3,7 +3,7 @@
         "query_graph": {
             "nodes": {
                 "n0": {
-                     "ids": ["NCIT:C26991"],
+                     "ids": ["MESH:D056487"],
                      "categories": ["biolink:DiseaseOrPhenotypicFeature"]
                 },
                 "n1": {
@@ -13,14 +13,14 @@
                     "categories": ["biolink:Gene"]
                 },
                 "n3": {
-                    "categories": ["biolink:ChemicalEntity"]
+                    "categories": ["biolink:ChemicalSubstance"]
                 }
             },
             "edges": {
                 "e01": {
                     "subject": "n0",
                     "object": "n1",
-                    "predicates": ["biolink:has_real_world_evidence_of_association_with"]
+                    "predicates": ["biolink:correlated_with"]
                 },
                 "e02": {
                     "subject": "n2",
@@ -36,4 +36,3 @@
         }
     }
 }
-

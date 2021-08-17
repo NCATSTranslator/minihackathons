@@ -6,7 +6,15 @@
                     "categories": [
                         "biolink:SmallMolecule"
                     ],
-                    "name": "Small Molecule"
+                    "name": "Small Molecule",
+                    "constraints": [
+                        {
+                            "id": "biolink:highest_FDA_approval_status",
+                            "name": "highest FDA approval status",
+                            "operator": "==",
+                            "value": "regular approval"
+                        }
+                    ]
                 },
                 "n1": {
                     "name": "EGFR",
