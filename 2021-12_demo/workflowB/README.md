@@ -1,6 +1,6 @@
 # Workflow B: DILI Drug Repurposing
 
-DILI (drug-induced liver injury) is the outcome of a drug exposure in rare patients with heightened sensitivity to drug-related hepatic sequalea. Drugs account for 20-40% of all instances of fulminant hepatic failure, and drug-induced hepatic injury is the most common cited reason for withdrawal of an approved drug from the market.
+DILI (drug-induced liver injury) is the outcome of a drug exposure in rare patients with heightened sensitivity to drug-related hepatic sequela. Drugs account for 20-40% of all instances of fulminant hepatic failure, and drug-induced hepatic injury is the most common cited reason for withdrawal of an approved drug from the market.
 
 DILI has only one consensus treatment: discontinuation of the causal agent. While DILI may resolve after the causal agent is discontinued, complete resolution may require months or years and, in many cases, the condition deterioriates before resolving and/or becomes chronic. Moreover, DILI is associated with high healthcare costs and high morbidity and mortality, often leading to hospitalization, liver transplant, and other poor outcomes.
 
@@ -28,9 +28,13 @@ Suggested input CURIES for three-hop TRAPI queries from DiseaseOrPhenotypicFeatu
 
 [Node Normalizer equivalent identifiers](https://drive.google.com/file/d/1rtvBM7J3AQpYFbLZquG3UUC1Ck5h_lA1/view?usp=sharing)
 
+**Important:** While this workflow narrative focuses on DILI, the workflow itself is intended to be disease-agnostic. The focus on DILI is only to highlight Translator capabilities in the context of a compelling use case and engaged user community.
+
 *For reference, here is the [workflow mural board](https://app.mural.co/t/ncats3030/m/ncats3030/1620608471364/d9d6ca5aefb8c7af4f756312d2500f0a3f465008), [pre-relay meeting materials](https://drive.google.com/drive/folders/1sCA6iouNHOh9I4ivXrR6DCct6fGgXbXp?usp=sharing), and [Spring 2021 relay meeting materials](https://github.com/ranking-agent/robogallery/tree/master/relay_spring_2021/DILI). Also see mini-hackathon issues #43, #44, #45, #46, #48, and #49.*
 
 *Note that Workflow B was tested using [multihop.py](https://github.com/NCATS-Tangerine/icees-api-config/tree/master/cli), which is a script that Hao Xu wrote to chain together KPs and ARAs, such that KP1's output becomes KP2's input, and so on. We used this tool to troubleshoot the workflow, in terms of ARA and KP debugging, and initiate evaluation of answers for scientific impact, given timeout issues related to the ARS. Testing results can be found [here](https://drive.google.com/drive/folders/1sCA6iouNHOh9I4ivXrR6DCct6fGgXbXp?usp=sharing). Note that the testing was extremely useful and surfaced multiple issues, since resolved. We are now testing the workflow via direct ARA query. We are also exploring the use of alternative node categories to replace biolink:Gene, for instance, biolink:BiologicalProcessOrActivity. The intent here is to determine whether the use of less common categories addresses the timeout issue.*
+
+*A successful ARS three-hop query using MESH:D056487 can be accessed using PK = f02e762d-de0d-4069-935c-a6ed821998ac.*
 
 ### Related Workflow
 
