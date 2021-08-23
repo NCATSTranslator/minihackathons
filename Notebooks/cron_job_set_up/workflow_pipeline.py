@@ -321,4 +321,5 @@ rules.save()
 cell_list = sh.range('B16:X16')
 
 # Update in batch
+# Here I am updating the cells to appear as a hyperlink
 sh.update_cells(cell_list,value_input_option='USER_ENTERED')
