@@ -1,10 +1,50 @@
 ## Overall Workflow
 See this [google drive folder](https://drive.google.com/drive/folders/1PHpGOQdikLvnLBVEnTsRwlMNYObtQ1lo) (specifically, these [google slides](https://docs.google.com/presentation/d/1D7DkFW5kQe45DBOQP_m_kka3obGQdTm8AdnU_Akel0c/edit#slide=id.ge177b547c0_0_0))
 
-- **Query 1:** Find **drugs** (ChemicalSubstance) related to **disease X**
+- **Query 1:** Find **drugs** (ChemicalEntity) related to **disease X**
 - **Query 2:** For 1 or more SME-selected drugs from Query 1, find **drugs** related to a **gene set** that is related both to (1) **disease X** and to (2) the **SME-selected drug(s)**
 
 ![image](https://user-images.githubusercontent.com/18222763/124309535-b4e04d80-db1f-11eb-9ffb-f6467a79f29f.png)
+
+## December Demo Narrative
+
+The following provides a high-level narrative for walking through workflow C in the December demo. Note that this should be seen as a template narrative in which the specific disease example (in this case, multiple sclerosis) could be replaced by another disease of interest. By the time of the December demo, we should have one or two solid disease examples in which the narrative outlined below highlights some compelling results.
+
+### Example narrative using multiple sclerosis as the disease of interest
+
+For a disease of interest we would first like to identify drugs that are in some way associated with the disease, based on data from a clinical care setting. These could be drugs (1) used to directly treat the disease, (2) used to treat symptoms or comorbidities typically associated with the disease, or possibly (3) drugs used for treating another condition, but which have the side effect of exacerbating the disease of interest.
+
+As an example, let's say we're interested in drugs associated with multiple sclerosis. We could query Translator for this information as follows:
+
+[_Run query C.1 (or view results previously obtained) using multiple scelerosis as the disease of interest_]
+
+Reviewing results, we see several drugs commonly used in the treatment of multiple sclerosis:
+
+[_Point out examples of drugs used to treat the disease e.g. ocrelizumab, natalizumab_]
+
+We also see drugs that are used to treat symptoms or secondary conditions commonly seen in multiple sclerosis patients:
+
+[_Point out examples of drugs used to treat symptoms, such as pain or muscle spasticity e.g. baclofen, tizanidine, gabapentin, oxybutynin_]
+
+A clinician reviewing these results will easily recognize these expected drugs. Other drugs may be more surprising. In some cases, these may be drugs that are used off-label for the disease or have been in clinical trials for repurposing.
+
+[_Point out examples e.g. imatinib_]
+
+What if Translator could (1) provide information about underlying pathways of action for such drugs and (2) identify an expanded list of drugs that may operate via similar pathways. We can run such a query.
+
+[_Run query C.2 (or view results previously obtained) using imatinib, or another interesting drug_]
+
+Here is a set of genes (or pathways) that are associated with both multiple sclerosis and the drug(s) that we selected from the first query. And here is a group of drugs that are associated with those genes/pathways. Inspecting the drugs, we see some interesting results.
+
+[_Highlight some of the drugs in the final group that are interesting (might also highlight some of the genes/pathways)_]
+
+Translator also has an "overlay" feature that can provide additional "provenance" or source information, such as references to published studies reporting evidence of associations between these drugs and the disease of interest. For example, here's a "research evidence" edge connecting the drug <_interesting drug from final results_> to multiple sclerosis. If we click on that link, we get a list of PubMed IDs to papers that we can look at to understand the basis of these associations.
+
+[_Click on a few PMIDs and highlight some of the published research results_]
+
+Emphasize that we could follow a similar investigative/exploratory workflow with other diseases besides multiple sclerosis.
+
+[_Possibly briefly highlight interesting results already generated for another disease_]
 
 ## Example Using Multiple Sclerosis as Disease X
 ### Query 1: ChemicalSubstances related_to MONDO:0005301
