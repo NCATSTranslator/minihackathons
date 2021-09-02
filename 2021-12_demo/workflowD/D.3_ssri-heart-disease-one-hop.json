@@ -20,7 +20,7 @@
           "categories": ["biolink:SmallMolecule"]
         },
         "n01": {
-          "ids": ["DOID:114"],
+          "ids": ["DOID:5844", "DOID:1936", "DOID:3393"],
           "categories": ["biolink:Disease"]
         }
       }
