@@ -36,7 +36,7 @@ What if Translator could (1) provide information about underlying pathways of ac
 
 [_Run query C.2 (or view results previously obtained) using imatinib, or another interesting drug_]
 
-Here is a set of genes (or pathways) that are associated with both multiple sclerosis and the drug(s) that we selected from the first query. And here is a group of drugs that are associated with those genes/pathways. Inspecting the drugs, we see some interesting results.
+Here is a set of genes (or pathways) that are associated with both multiple sclerosis and the drug(s) that we selected from the first query. And here is a group of drugs that are associated with those genes/pathways. Inspecting the drugs, we see some interesting results. Let's look at <_interesting drug, likely nimodipine pending resolution of new ARA github issue, but could use others if needed, will add biomedical notes here_>.
 
 [_Highlight some of the drugs in the final group that are interesting (might also highlight some of the genes/pathways)_]
 
@@ -46,7 +46,7 @@ Translator also has an "overlay" feature that can provide additional "provenance
 
 Emphasize that we could follow a similar investigative/exploratory workflow with other diseases besides multiple sclerosis.
 
-[_Possibly briefly highlight interesting results already generated for another disease_]
+[_Possibly briefly highlight interesting results already generated for other diseases: Ehlers-Danlos, Psoriatic Arthritis_]
 
 ## Example Using Multiple Sclerosis as Disease X
 ### Query 1: ChemicalEntity has_real_world_evidence_of_association_with MONDO:0005301
