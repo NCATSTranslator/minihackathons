@@ -1,5 +1,5 @@
 # Purpose
-The purpose of the EGFR workflow is to help a clinician find candidate drugs to treat neonatal inflammatory skin and bowel diseases caused by an overactive EGFR gene. Neonatal inflammatory skin and bowel disease is a rare, life-threatening, autoinflammatory syndrome with immune deficiency disorder characterized by early-onset, life-long inflammation affecting the skin and bowel and is associated with recurrent infections. This query came to us by way of UAB's Precision Medicine Institute.
+The EGFR (epidermal growth factor receptor) gene has an overactive variant that results in Acanthosis nigricans, an overgrowth of skin in some areas of the body that can be uncomfortable and disfiguring, but not life threatening. The purpose of this workflow is to help a clinician find an existing drug already FDA approved that can decrease the activity of the EGFR gene and provide relief to the patient. This [query](https://docs.google.com/presentation/d/1393qJ_Pcsl-hkwrsScqNLycEOuk-7dDkp5ey4UuEBbA/edit#slide=id.gd73e060e6f_0_2512) came to us by way of UAB's Precision Medicine Institute.
 
 # Query Notes
 ```
