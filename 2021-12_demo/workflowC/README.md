@@ -36,7 +36,7 @@ What if Translator could (1) provide information about underlying pathways of ac
 
 [_Run query C.2 (or view results previously obtained) using imatinib, or another interesting drug_]
 
-Here is a set of genes (or pathways) that are associated with both multiple sclerosis and the drug(s) that we selected from the first query. And here is a group of drugs that are associated with those genes/pathways. Inspecting the drugs, we see some interesting results. Let's look at <_interesting drug, likeley nimodipine pending resolution of new ARA github issue, but could use others if needed, will add biomedical notes here_>.
+Here is a set of genes (or pathways) that are associated with both multiple sclerosis and the drug(s) that we selected from the first query. And here is a group of drugs that are associated with those genes/pathways. Inspecting the drugs, we see some interesting results. Let's look at <_interesting drug, likely nimodipine pending resolution of new ARA github issue, but could use others if needed, will add biomedical notes here_>.
 
 [_Highlight some of the drugs in the final group that are interesting (might also highlight some of the genes/pathways)_]
 
