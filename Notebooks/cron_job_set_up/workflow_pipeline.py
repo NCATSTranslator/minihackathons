@@ -35,7 +35,7 @@ Main funtions to submit queries to ARS. Note this can be converted at
 
 '''
 
-def submit_to_ars(m,ars_url='https://ars.ci.transltr.io/ars/api',arax_url='https://arax.ncats.io'):
+def submit_to_ars(m,ars_url='https://ars.ci.transltr.io/ars/api',arax_url='https://arax.ci.transltr.io'):
     submit_url=f'{ars_url}/submit'
     response = requests.post(submit_url,json=m)
     try:
@@ -49,7 +49,7 @@ def submit_to_ars(m,ars_url='https://ars.ci.transltr.io/ars/api',arax_url='https
 ##https://ars.ci.transltr.io/ars/api
 
 def retrieve_ars_results(mid,ars_url='https://ars.ci.transltr.io/ars/api'):
-    pk = 'https://arax.ncats.io/?source=ARS&id=' + mid
+    pk = 'https://arax.ci.transltr.io/?source=ARS&id=' + mid
     message_url = f'{ars_url}/messages/{mid}?trace=y'
     response = requests.get(message_url)
     j = response.json()
@@ -143,12 +143,14 @@ for root, dirs, files in os.walk(PATH): # step 1: accessing file
                 
                 kcresult = submit_to_ars(query)
                 
+                sleep(900)
+                
                 result_status = retrieve_ars_results(kcresult)
                 
         
                 dict_workflows[filename] = kcresult
                             
-                sleep(500)
+                
                 
 ## Grap all the message status     
 
@@ -318,7 +320,7 @@ rules.save()
 
 
 # Select a range
-cell_list = sh.range('B16:X16')
+cell_list = sh.range('B17:X17')
 
 # Update in batch
 # Here I am updating the cells to appear as a hyperlink
