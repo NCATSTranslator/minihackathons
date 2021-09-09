@@ -6,7 +6,8 @@
                     "object": "n0",
                     "subject": "n1",
                     "predicates": [
-                        "biolink:entity_regulates_entity"
+                        "biolink:entity_regulates_entity",
+                        "biolink:genetically_interacts_with"
                     ]
                 },
                 "e02": {
