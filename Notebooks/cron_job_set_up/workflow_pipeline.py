@@ -110,7 +110,7 @@ def retrieve_ars_results(mid,ars_url='https://ars.transltr.io/ars/api'):
             nresults = 0
             #dictionary_2[child['actor']['agent']] = []
             
-        dictionary['pk_id'] =  pk  
+        dictionary['pk'] =  pk  
             
         if ((child['status'] == 'Done') & (nresults == 0)):
             dictionary[child['actor']['agent']] = 'No Results' ': ' + str(error_code)
