@@ -3,8 +3,8 @@
         "query_graph": {
             "edges": {
                 "e00": {
-                    "subject": "n00",
-                    "object": "n01",
+                    "subject": "n01",
+                    "object": "n00",
                     "predicates": [
                         "biolink:has_real_world_evidence_of_association_with"
                     ]
