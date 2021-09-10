@@ -1,10 +1,12 @@
-## Overall Workflow
+## Clinical real-world evidence: current drugs and potential new insights
 See this [google drive folder](https://drive.google.com/drive/folders/1PHpGOQdikLvnLBVEnTsRwlMNYObtQ1lo) (specifically, these [google slides](https://docs.google.com/presentation/d/1D7DkFW5kQe45DBOQP_m_kka3obGQdTm8AdnU_Akel0c/edit#slide=id.ge177b547c0_0_0))
 
-- **Query 1:** Find **drugs** (ChemicalEntity) related to **disease X**
-- **Query 2:** For 1 or more SME-selected drugs from Query 1, find **drugs** related to a **gene set** that is related both to (1) **disease X** and to (2) the **SME-selected drug(s)**
+- **Query 1 (Explore):** Find **drugs** (SmallMolecule, Drug, or ChemicalEntity) related to **disease X**
+- **Query 2 (Explain & Expand):** For 1 or more SME-selected drugs from Query 1, find **drugs** related to a **gene set** that is related both to (1) **disease X** and to (2) the **SME-selected drug(s)**
 
-![image](https://user-images.githubusercontent.com/18222763/124309535-b4e04d80-db1f-11eb-9ffb-f6467a79f29f.png)
+**Note:** Overlay edges can provide research evidence (links to published papers) for final results
+
+![image](https://user-images.githubusercontent.com/18222763/130814236-7721958b-6896-4b4c-92a9-517169b0202c.png)
 
 ## December Demo Narrative
 
@@ -34,7 +36,7 @@ What if Translator could (1) provide information about underlying pathways of ac
 
 [_Run query C.2 (or view results previously obtained) using imatinib, or another interesting drug_]
 
-Here is a set of genes (or pathways) that are associated with both multiple sclerosis and the drug(s) that we selected from the first query. And here is a group of drugs that are associated with those genes/pathways. Inspecting the drugs, we see some interesting results.
+Here is a set of genes (or pathways) that are associated with both multiple sclerosis and the drug(s) that we selected from the first query. And here is a group of drugs that are associated with those genes/pathways. Inspecting the drugs, we see some interesting results. Let's look at <_interesting drug, likely nimodipine pending resolution of new ARA github issue, but could use others if needed, will add biomedical notes here_>.
 
 [_Highlight some of the drugs in the final group that are interesting (might also highlight some of the genes/pathways)_]
 
@@ -44,12 +46,14 @@ Translator also has an "overlay" feature that can provide additional "provenance
 
 Emphasize that we could follow a similar investigative/exploratory workflow with other diseases besides multiple sclerosis.
 
-[_Possibly briefly highlight interesting results already generated for another disease_]
+[_Possibly briefly highlight interesting results already generated for other diseases: Ehlers-Danlos, Psoriatic Arthritis_]
 
 ## Example Using Multiple Sclerosis as Disease X
-### Query 1: ChemicalSubstances related_to MONDO:0005301
+### Query 1: ChemicalEntity has_real_world_evidence_of_association_with MONDO:0005301
 
-The TRAPI query, immediately below, returns **drugs** related to **multiple sclerosis**. Using the ARAX DSL, it is possible to target specific KPs (for example clinical KPs) for more domain-specific knowledge (see DSL Query A, below). This can be further refined by querying a single, specific KP and sorting results based on an edge property (see DSL Query B, below).
+**NOTE:** The original query C.1 is shown below. However, ChemicalSubstance is no longer supported in biolink 2.1+. Current alternatives are ChemicalEntity, Drug, or SmallMolecule. Also, we will use ```has_real_world_evidence_of_association_with``` instead of ```related_to```, going forward (see [discussion starting here](https://github.com/NCATSTranslator/minihackathons/issues/47#issuecomment-880982559)).
+
+_Original documentation of this query:_ The TRAPI query, immediately below, returns **drugs** related to **multiple sclerosis**. Using the ARAX DSL, it is possible to target specific KPs (for example clinical KPs) for more domain-specific knowledge (see DSL Query A, below). This can be further refined by querying a single, specific KP and sorting results based on an edge property (see DSL Query B, below).
 
 **TRAPI 1.1 Query**
 Submitted to: https://ars-dev.transltr.io/ars/api/submit
@@ -107,9 +111,11 @@ resultify()
 filter_results(action=sort_by_edge_attribute, edge_attribute=feature_coefficient, direction=descending, max_results=30, prune_kg=true)
 ```
 
-### Query 2: ChemicalSubstances related_to MS/imatinib Genes
+### Query 2: ChemicalEntity related_to MS/imatinib Genes
 
-The TRAPI query, immediately below, is meant to return **drugs** related to a **set of genes** that are related to both (1) **multiple sclerosis** and (2) a single SME-selected drug (from ARAX DSL Query B results, above), **imatinib**. Without operations and other advanced features yet supported by TRAPI, ARS, and some ARAs, the query is under-constrained and does not yield results. However, taking advantage of such features supported by ARAX, results are obtainable using an ARAX DSL query (see DSL Query, below).
+**NOTE:** The original query C.2 is shown below. However, ChemicalSubstance is no longer supported in biolink 2.1+. Current alternatives are ChemicalEntity, Drug, or SmallMolecule.
+
+_Original documentation of this query:_ The TRAPI query, immediately below, is meant to return **drugs** related to a **set of genes** that are related to both (1) **multiple sclerosis** and (2) a single SME-selected drug (from ARAX DSL Query B results, above), **imatinib**. Without operations and other advanced features yet supported by TRAPI, ARS, and some ARAs, the query is under-constrained and does not yield results. However, taking advantage of such features supported by ARAX, results are obtainable using an ARAX DSL query (see DSL Query, below).
 
 **TRAPI 1.1 Query**
 Submitted to: https://ars-dev.transltr.io/ars/api/submit
