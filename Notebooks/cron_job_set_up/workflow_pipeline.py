@@ -35,6 +35,18 @@ Main funtions to submit queries to ARS. Note this can be converted at
 
 '''
 
+def flatten_list(_2d_list):
+    flat_list = []
+    # Iterate through the outer list
+    for element in _2d_list:
+        if type(element) is list:
+            # If the element is of type list, iterate through the sublist
+            for item in element:
+                flat_list.append(item)
+        else:
+            flat_list.append(element)
+    return flat_list
+
 def submit_to_ars(m,ars_url='https://ars.transltr.io/ars/api',arax_url='https://arax.ncats.io'):
     submit_url=f'{ars_url}/submit'
     response = requests.post(submit_url,json=m)
@@ -73,13 +85,21 @@ def retrieve_ars_results(mid,ars_url='https://ars.transltr.io/ars/api'):
                 if child_response['fields']['data']['message']['knowledge_graph']['edges']:
                     if child_response['fields']['data']['message']['knowledge_graph']['edges'].keys():
                             edge_ex = child_response['fields']['data']['message']['knowledge_graph']['edges']
+                            test_att_values =[]
                             for val in child_response['fields']['data']['message']['knowledge_graph']['edges'].keys():
                                 #print(val)
-                                test_att_values =[]
+                                
                                 for tx in edge_ex[val]['attributes']:
                                     if (tx['attribute_type_id'] == 'biolink:primary_knowledge_source') or (tx['attribute_type_id'] == 'biolink:original_knowledge_source') or (tx['attribute_type_id'] == 'biolink:aggregator_knowledge_source') :
-                                        test_att_values.append(tx['value'])
-                                        dictionary_2[child['actor']['agent']] = test_att_values
+                                        
+                                        
+                                        value_att = tx['value']
+                        
+                                        test_att_values.append(value_att)
+                                        test_att = set(flatten_list(test_att_values))
+                                        
+                                        
+                                        dictionary_2[child['actor']['agent']] = test_att
                     #else:
                         #dictionary_2[child['actor']['agent']] = [] 
                 #else:
