@@ -3,7 +3,7 @@
         "query_graph": {
             "nodes": {
                 "n0": {
-                     "ids": ["NCIT:C26991"],
+                     "ids": ["SNOMED:427399008"],
                      "categories": ["biolink:DiseaseOrPhenotypicFeature"]
                 },
                 "n1": {
