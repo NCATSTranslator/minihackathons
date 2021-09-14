@@ -1,0 +1,26 @@
+{
+	"message": {
+		"query_graph": {
+			"nodes": {
+				"n0": {
+					"ids": ["D003474"],
+					"categories": [
+						"biolink:ChemicalEntity"
+					]
+				},
+				"n1": {
+					"categories": [
+						"biolink:DiseaseOrPhenotypicFeature"
+					]
+				}
+			},
+			"edges": {
+				"e0": {
+					"subject": "n0",
+					"object": "n1",
+					"predicates": ["biolink:interacts_with"]
+				}
+			}
+		}
+	}
+}
