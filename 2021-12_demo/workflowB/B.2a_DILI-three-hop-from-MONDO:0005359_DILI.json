@@ -3,7 +3,7 @@
         "query_graph": {
             "nodes": {
                 "n0": {
-                     "ids": ["MESH:D056487"],
+                     "ids": ["MONDO:0005359"],
                      "categories": ["biolink:DiseaseOrPhenotypicFeature"]
                 },
                 "n1": {
