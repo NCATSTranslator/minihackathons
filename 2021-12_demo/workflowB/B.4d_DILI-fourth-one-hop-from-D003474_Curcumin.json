@@ -3,7 +3,7 @@
 		"query_graph": {
 			"nodes": {
 				"n0": {
-					"ids": ["D003474"],
+					"ids": ["MESH:D003474"],
 					"categories": [
 						"biolink:ChemicalEntity"
 					]
