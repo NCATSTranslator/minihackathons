@@ -1,5 +1,9 @@
 ## For Vicki
 
+#To run this type below command line in the terminal where the script is hosted
+
+#python3.9 submission_for_VG.py
+
 
 import requests
 import json
