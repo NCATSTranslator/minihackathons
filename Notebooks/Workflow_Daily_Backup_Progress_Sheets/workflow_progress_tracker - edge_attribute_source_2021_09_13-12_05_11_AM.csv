@@ -1,0 +1,86 @@
+,A.0_RHOBTB2_direct,A.1_RHOBTB2,A.2_RHOBTB2_twohop,A.3_KCNMA1,A.8_EGFR_simple,A.9_EGFR_advanced,B.1a_DILI-three-hop-from-disease-or-phenotypic-feature_trapi,B.1b_DILI_three-hop-from-disease-or-phenotypic-feature_trapi,B.1c_DILI_three-hop-from-disease-or-phenotypic-feature_trapi,B.1e_DILI_three-hop-from-disease-or-phenotypic-feature_trapi,B.1f_DILI-three-hop-from-disease-or-phenotypic-feature_trapi,B.3_DILI-one-hop-from-genes,B.4_one-hop-gene-biological-process-or-activity_trapi,C.1_ChemSubstances_related_to_Disease,D.1_parkinsons-crohns,D.2_ssri-heart-disease,D.3_ssri-heart-disease-one-hop,D.4_tryptophan-kynurenine,D.6_metformin-ferritin
+BioLink API,,,,,,,,,,,,,,,,['ara-bte'],,,
+BioThings DGIdb API,,,['ara-bte'],['ara-bte'],,,,,,,,,,,,['ara-bte'],,['ara-arax'],
+CTD,,,,,,,,,,,,,,,['ara-aragorn'],['ara-aragorn'],,,
+Clinical Risk KP API,,,,,,,,,,,,,,['ara-bte'],,,['ara-bte'],,
+DisGeNET,,,,,,,,,,,,,,,['ara-aragorn'],['ara-aragorn'],,,
+DrugCentral Indication,,,,,,,,,,,,,,,,['ara-bte'],,,
+JensenLab Knowledge GHR,,,,,,,,,,,,,,,['ara-aragorn'],,,,
+JensenLab Knowledge UniProtKB-KW,,,,,,,,,,,,,,,['ara-aragorn'],,,,
+JensenLab Text Mining,,,,,,,,,,,,,,,['ara-aragorn'],['ara-aragorn'],,,
+Monarch,,,,,,,,,,,,,,,['ara-aragorn'],,,,
+Multiomics Wellness KP API,,,,,,,,,,,,,,,,,,,['ara-bte']
+MyChem.info API,,,,,,,,,,,,,,,,,['ara-bte'],,
+MyDisease.info API,,,,,,,,,,,,,,,,['ara-bte'],['ara-bte'],,
+SEMMED Disease API,,,,,,,,,,,,,,,,['ara-bte'],,,
+SEMMED Gene API,,"['ara-arax', 'ara-bte']","['ara-arax', 'ara-bte']",,,,,,,,,,,,,,,,
+Text Mining Targeted Association API,,,,,,,,,,,,,,,,,,['ara-arax'],['ara-bte']
+eRAM,,,,,,,,,,,,,,,['ara-aragorn'],,,,
+icees:dili,,,,,,,['ara-arax'],,['ara-arax'],['ara-arax'],['ara-arax'],,,,,,,,
+infores:aragorn,,['ara-aragorn'],,['ara-aragorn'],,,,,,,,['ara-aragorn'],['ara-aragorn'],['ara-aragorn'],['ara-aragorn'],['ara-aragorn'],['ara-aragorn'],,['ara-aragorn']
+infores:aragorn-ranker-ara,,,['ara-robokop'],"['ara-aragorn', 'ara-robokop']",['ara-robokop'],,,,,,,"['ara-aragorn', 'ara-robokop']",['ara-aragorn'],['ara-aragorn'],['ara-aragorn'],['ara-aragorn'],['ara-aragorn'],,
+infores:arax,,['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],
+infores:automat-robokop,,,,,,,,,,,,,,,['ara-aragorn'],,,,
+infores:automat.cord19,,,['ara-bte'],"['ara-aragorn', 'ara-bte']",,,,,,,,['ara-aragorn'],,,['ara-aragorn'],"['ara-aragorn', 'ara-bte']",,,
+infores:automat.covidkop,,,,,,,,,,,,,,,['ara-aragorn'],['ara-bte'],['ara-aragorn'],,
+infores:automat.ctd,,,['ara-bte'],['ara-aragorn'],,,,,,,,['ara-aragorn'],,,,"['ara-aragorn', 'ara-bte']",['ara-aragorn'],,
+infores:automat.gtopdb,,,,['ara-aragorn'],,,,,,,,['ara-aragorn'],,,,['ara-aragorn'],,,
+infores:automat.hetio,,,"['ara-arax', 'ara-bte']",['ara-aragorn'],,,,,,,,['ara-aragorn'],,,['ara-aragorn'],['ara-aragorn'],['ara-aragorn'],,
+infores:automat.intact,,,,,,,,,,,,,,,,,,,['ara-aragorn']
+infores:automat.mychem-info,,,,,,,,,,,,,,,['ara-aragorn'],['ara-aragorn'],['ara-aragorn'],,
+infores:automat.ontology-hierarchy,,,,,,,,,,,,,,,['ara-aragorn'],,,,"['ara-aragorn', 'ara-bte']"
+infores:automat.pharos,,,['ara-bte'],"['ara-aragorn', 'ara-bte']",,,,,,,,['ara-aragorn'],,,['ara-aragorn'],"['ara-aragorn', 'ara-bte']",,,
+infores:automat.robokop,,,"['ara-bte', 'ara-robokop']","['ara-aragorn', 'ara-bte', 'ara-robokop']","['ara-bte', 'ara-robokop']",['ara-bte'],,,,,,"['ara-aragorn', 'ara-robokop']",,,['ara-aragorn'],"['ara-aragorn', 'ara-bte']",['ara-aragorn'],,"['ara-aragorn', 'ara-bte']"
+infores:automat.uberongraph,,,,,,,,,,,,,,,['ara-aragorn'],,,,"['ara-aragorn', 'ara-bte']"
+infores:automat:biolink,,,,,,,,,,,,,,,['ara-aragorn'],,['ara-aragorn'],,
+infores:bindingdb,,,,,,,,,,,,,,,,,,['ara-improving'],['ara-improving']
+infores:cam-kp,,,,,,,,,,,,,['ara-aragorn'],,,,,,
+infores:chembl,,,['ara-arax'],"['ara-arax', 'kp-molecular']","['ara-arax', 'kp-molecular']","['ara-arax', 'kp-molecular']",,,,,,,['kp-molecular'],,"['ara-aragorn', 'ara-arax', 'ara-improving']",['ara-arax'],"['ara-aragorn', 'ara-arax', 'ara-bte', 'ara-improving']",,['ara-bte']
+infores:civic,,,['ara-improving'],,,,,,,,,,,,,,,,
+infores:clinvar,,,,,,,,,,,,,,,['ara-aragorn'],,,,
+infores:cohd,,,,,,,,,,,,,,"['ara-aragorn', 'kp-cohd']",,,['kp-cohd'],,
+infores:connections-hypothesis,,,,['kp-chp'],,,,,,,,['kp-chp'],,,['ara-aragorn'],,,,
+infores:cord19-scibite,,,['ara-bte'],"['ara-aragorn', 'ara-bte']",,,,,,,,['ara-aragorn'],,,['ara-aragorn'],"['ara-aragorn', 'ara-bte']",,,
+infores:ctd,,,"['ara-bte', 'ara-robokop']","['ara-aragorn', 'ara-bte', 'ara-robokop']","['ara-bte', 'ara-robokop']",['ara-bte'],,,,,,"['ara-aragorn', 'ara-robokop']",,,,"['ara-aragorn', 'ara-bte']","['ara-aragorn', 'ara-bte']",,
+infores:dgidb,,,"['ara-arax', 'ara-bte']","['ara-aragorn', 'ara-arax', 'ara-bte', 'ara-unsecret', 'kp-molecular']","['ara-arax', 'kp-molecular']","['ara-arax', 'kp-molecular']",['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],,"['ara-aragorn', 'ara-arax', 'ara-unsecret', 'kp-molecular']",['kp-molecular'],,,"['ara-aragorn', 'ara-arax', 'ara-bte']",,['ara-arax'],
+infores:diseases,,,,,,,,,,,,,,,"['ara-aragorn', 'ara-improving']","['ara-aragorn', 'ara-improving']",,,
+infores:disgenet,,,,,,,['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],,,,"['ara-aragorn', 'ara-arax']","['ara-aragorn', 'ara-arax', 'ara-bte']",,,
+infores:drug-rep-hub,,,['ara-arax'],"['ara-arax', 'kp-molecular']","['ara-arax', 'kp-molecular']","['ara-arax', 'kp-molecular']",,,,,,,['kp-molecular'],,,,,['ara-arax'],
+infores:drugbank,,,['ara-arax'],"['ara-aragorn', 'ara-arax', 'ara-unsecret', 'kp-molecular']","['ara-arax', 'kp-molecular']","['ara-arax', 'kp-molecular']",['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],,['kp-molecular'],,,"['ara-aragorn', 'ara-arax']",,['ara-arax'],['ara-aragorn']
+infores:drugcentral,,,,,,,,,,,,,,,,,"['ara-aragorn', 'ara-bte', 'ara-improving']",,"['ara-bte', 'ara-improving']"
+infores:faers,,,,,,,,,,,,,,,,,['ara-aragorn'],,
+infores:gencc,,,,,,,,,,,,,,,['ara-aragorn'],,,,
+infores:genetics-data-provider,,,,,,,,,,,,,,,"['ara-aragorn', 'ara-arax']",['ara-aragorn'],,,
+infores:go-cam,,,,,,,,,,,,,['ara-aragorn'],,,,,,
+infores:goa,,,,,,,,,,,,,['ara-arax'],,,,,['ara-arax'],
+infores:gtopdb,,,"['ara-arax', 'ara-bte', 'ara-robokop']","['ara-aragorn', 'ara-arax', 'ara-bte', 'ara-unsecret', 'kp-molecular', 'ara-robokop']","['ara-arax', 'ara-bte', 'kp-molecular', 'ara-robokop']","['ara-arax', 'ara-bte', 'kp-molecular']",,,,,,"['ara-aragorn', 'ara-arax', 'ara-unsecret', 'kp-molecular', 'ara-robokop']",['kp-molecular'],,,"['ara-aragorn', 'ara-bte']",,,
+infores:gwas-catalog,,,,,,,,,,,,,,,"['ara-aragorn', 'ara-improving']","['ara-aragorn', 'ara-improving']",,,
+infores:hetio,,,"['ara-arax', 'ara-bte', 'ara-robokop']","['ara-aragorn', 'ara-bte', 'ara-robokop']",,,,,,,,"['ara-aragorn', 'ara-robokop']",,,['ara-aragorn'],"['ara-aragorn', 'ara-bte']",['ara-aragorn'],,
+infores:hmdb,,,['ara-arax'],"['ara-arax', 'kp-molecular']","['ara-arax', 'kp-molecular']","['ara-arax', 'kp-molecular']",,,,,,"['ara-arax', 'kp-molecular']",['kp-molecular'],,,,,['ara-arax'],
+infores:improving-agent,['ara-improving'],['ara-improving'],['ara-improving'],['ara-improving'],['ara-improving'],['ara-improving'],,,,,,['ara-improving'],,,['ara-improving'],['ara-improving'],['ara-improving'],['ara-improving'],['ara-improving']
+infores:intact,,,,,,,,,,,,,,,,,,,"['ara-aragorn', 'ara-bte']"
+infores:kegg,,,,,,,,,,,,,,,,,,['ara-improving'],
+infores:lincs,['ara-improving'],"['ara-aragorn', 'ara-improving']","['ara-improving', 'ara-robokop']",['ara-improving'],['ara-improving'],['ara-improving'],,,,,,"['ara-aragorn', 'ara-improving', 'ara-robokop']",,,,"['ara-aragorn', 'ara-improving']",,,
+infores:mesh,,,,,,,,,,,,,,,"['ara-aragorn', 'ara-improving']",,,,
+infores:molepro-kp,,,['ara-arax'],"['ara-aragorn', 'ara-arax', 'ara-unsecret', 'kp-molecular']","['ara-arax', 'kp-molecular']","['ara-arax', 'kp-molecular']",,,,,,"['ara-aragorn', 'ara-arax', 'ara-unsecret', 'kp-molecular']",['kp-molecular'],,,,,['ara-arax'],['ara-aragorn']
+infores:monarchinitiative,,,,,,,,,,,,,,,,['ara-bte'],,,
+infores:mondo,,,,,,,,,,,,,,,"['ara-aragorn', 'ara-arax']",,,,
+infores:ontological-hierarchy,,,,,,,,,,,,,,,['ara-aragorn'],,,,"['ara-aragorn', 'ara-bte']"
+infores:pharos,,,['ara-bte'],"['ara-aragorn', 'ara-bte']",,,,,,,,['ara-aragorn'],,,['ara-aragorn'],"['ara-aragorn', 'ara-bte']",,,
+infores:reactome,,,,,,,,,,,,,['ara-arax'],,,,,['ara-arax'],
+infores:rtx-kg2,,['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],,"['ara-aragorn', 'ara-arax']","['ara-aragorn', 'ara-arax']","['ara-aragorn', 'ara-arax']",['ara-arax'],['ara-aragorn']
+infores:semmeddb,,"['ara-arax', 'ara-bte']","['ara-arax', 'ara-bte']",['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],,,"['ara-aragorn', 'ara-arax']","['ara-aragorn', 'ara-arax', 'ara-bte']","['ara-aragorn', 'ara-arax']",['ara-arax'],['ara-aragorn']
+infores:sider,,,,,,,,,,,,,,,,,['ara-aragorn'],,
+infores:spoke,['ara-improving'],"['ara-aragorn', 'ara-improving']",['ara-improving'],['ara-improving'],['ara-improving'],['ara-improving'],,,,,,['ara-improving'],,,"['ara-aragorn', 'ara-improving']","['ara-aragorn', 'ara-improving']",['ara-improving'],['ara-improving'],"['ara-aragorn', 'ara-improving']"
+infores:sri-reference-kg,,,,,,,,,,,,,,,['ara-aragorn'],,['ara-aragorn'],,
+infores:stitch,,,,,,,,,,,,,,,,,,['ara-arax'],['ara-aragorn']
+infores:string,,,,,,,,,,,,,,,,,,,"['ara-aragorn', 'ara-improving']"
+infores:translator-biothings-explorer,,,"['ara-arax', 'ara-bte']",['ara-bte'],['ara-bte'],['ara-bte'],,,,,,,,,,['ara-bte'],,,['ara-bte']
+infores:ubergraph,,,,,,,,,,,,,,,['ara-aragorn'],,,,"['ara-aragorn', 'ara-bte']"
+infores:uniprot,,,['ara-arax'],,,,['ara-arax'],,['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],,,,,,['ara-arax'],
+pmid:12517791,,,['ara-improving'],,,,,,,,,,,,,,,,
+pmid:23779130,,,['ara-improving'],,,,,,,,,,,,,,,,
+pmid:24356815,,,['ara-improving'],,,,,,,,,,,,,,,,
+pmid:25184630,,,['ara-improving'],,,,,,,,,,,,,,,,
+pmid:26000489,,,['ara-improving'],,,,,,,,,,,,,,,,
+pmid:27153245,,,['ara-improving'],,,,,,,,,,,,,,,,

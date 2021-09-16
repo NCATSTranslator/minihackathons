@@ -35,7 +35,19 @@ Main funtions to submit queries to ARS. Note this can be converted at
 
 '''
 
-def submit_to_ars(m,ars_url='https://ars.ci.transltr.io/ars/api',arax_url='https://arax.ci.transltr.io'):
+def flatten_list(_2d_list):
+    flat_list = []
+    # Iterate through the outer list
+    for element in _2d_list:
+        if type(element) is list:
+            # If the element is of type list, iterate through the sublist
+            for item in element:
+                flat_list.append(item)
+        else:
+            flat_list.append(element)
+    return flat_list
+
+def submit_to_ars(m,ars_url='https://ars.transltr.io/ars/api',arax_url='https://arax.ncats.io'):
     submit_url=f'{ars_url}/submit'
     response = requests.post(submit_url,json=m)
     try:
@@ -48,16 +60,19 @@ def submit_to_ars(m,ars_url='https://ars.ci.transltr.io/ars/api',arax_url='https
 
 ##https://ars.ci.transltr.io/ars/api
 
-def retrieve_ars_results(mid,ars_url='https://ars.ci.transltr.io/ars/api'):
-    pk = 'https://arax.ci.transltr.io/?source=ARS&id=' + mid
+def retrieve_ars_results(mid,ars_url='https://ars.transltr.io/ars/api'):
+    pk = 'https://arax.ncats.io/?source=ARS&id=' + mid
     message_url = f'{ars_url}/messages/{mid}?trace=y'
     response = requests.get(message_url)
     j = response.json()
     print( j['status'] )
     results = {}
     dictionary = {}
+    dictionary_2 = {}
     for child in j['children']:
         print(child['status'])
+        error_code = child['code']
+        
         if child['status']  == 'Done':
             childmessage_id = child['message']
             child_url = f'{ars_url}/messages/{childmessage_id}'
@@ -66,9 +81,37 @@ def retrieve_ars_results(mid,ars_url='https://ars.ci.transltr.io/ars/api'):
                 nresults = len(child_response['fields']['data']['message']['results'])
                 if nresults > 0:
                     results[child['actor']['agent']] = {'message':child_response['fields']['data']['message']}
+                    
+                if child_response['fields']['data']['message']['knowledge_graph']['edges']:
+                    if child_response['fields']['data']['message']['knowledge_graph']['edges'].keys():
+                            edge_ex = child_response['fields']['data']['message']['knowledge_graph']['edges']
+                            test_att_values =[]
+                            for val in child_response['fields']['data']['message']['knowledge_graph']['edges'].keys():
+                                #print(val)
+                                
+                                for tx in edge_ex[val]['attributes']:
+                                    if (tx['attribute_type_id'] == 'biolink:primary_knowledge_source') or (tx['attribute_type_id'] == 'biolink:original_knowledge_source') or (tx['attribute_type_id'] == 'biolink:aggregator_knowledge_source') :
+                                        
+                                        
+                                        value_att = tx['value']
+                        
+                                        test_att_values.append(value_att)
+                                        test_att = set(flatten_list(test_att_values))
+                                        
+                                        
+                                        dictionary_2[child['actor']['agent']] = test_att
+                    #else:
+                        #dictionary_2[child['actor']['agent']] = [] 
+                #else:
+                   # dictionary_2[child['actor']['agent']] = []
+            
             except Exception as e:
                 nresults=0
                 child['status'] = 'ARS Error'
+                #dictionary_2[child['actor']['agent']] = []
+                
+            
+        
         elif child['status'] == 'Error':
             nresults=0
             childmessage_id = child['message']
@@ -76,35 +119,46 @@ def retrieve_ars_results(mid,ars_url='https://ars.ci.transltr.io/ars/api'):
             try:
                 child_response = requests.get(child_url).json()
                 results[child['actor']['agent']] = {'message':child_response['fields']['data']['message']}
+                #dictionary_2[child['actor']['agent']] = []
             except Exception as e:
                 #print(e)
                 child['status'] = 'ARS Error'
+                #dictionary_2[child['actor']['agent']] = []
+        
+        
         else:
             nresults = 0
+            #dictionary_2[child['actor']['agent']] = []
             
         dictionary['pk'] =  pk  
             
         if ((child['status'] == 'Done') & (nresults == 0)):
-            dictionary[child['actor']['agent']] = 'No Results'
+            dictionary[child['actor']['agent']] = 'No Results' ': ' + str(error_code)
             #test =  [child['actor']['agent'], 'No Results']
         elif ((child['status'] == 'ARS Error') & (nresults == 0)):
-            dictionary[child['actor']['agent']] = 'ARS Error'
+            dictionary[child['actor']['agent']] = 'ARS Error' ': ' + str(error_code)
         elif ((child['status'] == 'Error') & (nresults == 0)):
-            dictionary[child['actor']['agent']] = 'Error'
+            dictionary[child['actor']['agent']] = 'Error' ': ' + str(error_code)
             #test =  [child['actor']['agent'], 'ARS Error']
         elif ((child['status'] == 'Done') & (nresults != 0)):
             #test =  [child['actor']['agent'], 'Results']
-            dictionary[child['actor']['agent']] = 'Results'
+            dictionary[child['actor']['agent']] = 'Results' ': ' + str(error_code)
         elif ((child['status'] == 'Unknown') & (nresults == 0)):
             #test =  [child['actor']['agent'], 'Results']
-            dictionary[child['actor']['agent']] = 'Unknown'
+            dictionary[child['actor']['agent']] = 'Unknown' ': ' + str(error_code)
         
         
         print(child['actor']['agent'], child['status'], nresults)
         #test =  [child['actor']['agent'], child['status'], nresults]
         #test2.append(test)
-    return dictionary
+    return [dictionary, dictionary_2]
 
+
+#def submit_to_devars(m):
+#    return submit_to_ars(m,ars_url='https://ars-dev.transltr.io/ars/api',arax_url='https://arax.ncats.io')
+
+#def retrieve_devars_results(m):
+#     return retrieve_ars_results(m,ars_url='https://ars-dev.transltr.io/ars/api')
 
 def printjson(j):
     print(json.dumps(j,indent=4))
@@ -143,19 +197,19 @@ for root, dirs, files in os.walk(PATH): # step 1: accessing file
                 
                 kcresult = submit_to_ars(query)
                 
-                sleep(900)
+                sleep(600)
                 
                 result_status = retrieve_ars_results(kcresult)
                 
         
                 dict_workflows[filename] = kcresult
+
+                sleep(100)
                             
                 
                 
 ## Grap all the message status     
-
-
-sleep(200)           
+        
                 
 workflow_result_messages = {}
 for keys, val in dict_workflows.items():
@@ -165,9 +219,7 @@ for keys, val in dict_workflows.items():
     
     workflow_result_messages[keys] = result_status
     
-    
-sleep(1200)    
-
+     
 
 ## Convert mesages to a dataframe
 col = []
@@ -192,7 +244,46 @@ df.rename(columns=dict(zip(df.columns, col)), inplace=True)
 
 # Converting the Pk's to hyperlink
 
+df.replace('ARS Error', 'No Results', regex=True,inplace=True)
+
 df.loc['pk'] = df.loc['pk'].apply(lambda x: make_hyperlink(x))
+
+
+
+
+### Creating second table with edge attribute source
+
+
+final_dict2 = defaultdict(dict)
+for k in sorted(workflow_result_messages):
+    print(k)
+    col.append(k)
+    
+    count = 0
+    
+    for key, value in workflow_result_messages[k][1].items():
+        final_dict2[k][key] = value
+
+
+final_dictassemble = []
+for k, vs in final_dict2.items():
+    #print(k,vs)
+    for kv, v in vs.items():
+        for t in v:
+            final_dictassemble.append([k,kv,t])
+
+
+
+column_names = ['Workflow', 'ARS-KPs', 'Values']
+df2 = pd.DataFrame(final_dictassemble, columns=column_names)
+df2 = df2.astype(str)
+df2.Values = df2.Values.apply(lambda x: x[2:-2] if ('[' in x) else x)
+df2test = df2.groupby(['Workflow','Values'])['ARS-KPs'].agg(list)
+
+df2test = pd.DataFrame(df2test.unstack().T)
+df2test = df2test.rename_axis(None)
+
+df2test.columns.name = None
 
 # Highlight the cells
 
@@ -274,7 +365,7 @@ sh = wksh.worksheet(wks_name)
 
 
 rule = ConditionalFormatRule(
-    ranges=[GridRange.from_a1_range('B2:{}16', sh)],
+    ranges=[GridRange.from_a1_range('B2:{}18', sh)],
     booleanRule=BooleanRule(
         condition=BooleanCondition('TEXT_EQ', ['Error']),
         format=CellFormat(textFormat=textFormat(bold=True), backgroundColor=Color(1,0,0))
@@ -286,7 +377,7 @@ rules.save()
 
 
 rule = ConditionalFormatRule(
-    ranges=[GridRange.from_a1_range('B2:{{16', sh)],
+    ranges=[GridRange.from_a1_range('B2:{}18', sh)],
     booleanRule=BooleanRule(
         condition=BooleanCondition('TEXT_EQ', ['Results']),
         format=CellFormat(textFormat=textFormat(bold=True), backgroundColor=Color(0.0, 0.5, 0.0))
@@ -297,7 +388,7 @@ rules.append(rule)
 rules.save()
 
 rule = ConditionalFormatRule(
-    ranges=[GridRange.from_a1_range('B2:{}15', sh)],
+    ranges=[GridRange.from_a1_range('B2:{}18', sh)],
     booleanRule=BooleanRule(
         condition=BooleanCondition('TEXT_EQ', ['No Results']),
         format=CellFormat(textFormat=textFormat(bold=True), backgroundColor=Color(0.75, 0.75, 0))
@@ -308,7 +399,7 @@ rules.append(rule)
 rules.save()
 
 rule = ConditionalFormatRule(
-    ranges=[GridRange.from_a1_range('B2:{}15', sh)],
+    ranges=[GridRange.from_a1_range('B2:{}18', sh)],
     booleanRule=BooleanRule(
         condition=BooleanCondition('TEXT_EQ', ['ARS Error']),
         format=CellFormat(textFormat=textFormat(bold=True), backgroundColor=Color(0.0, 0.75, 0.75))
@@ -320,8 +411,21 @@ rules.save()
 
 
 # Select a range
-cell_list = sh.range('B17:X17')
+cell_list = sh.range('B17:Y19')
 
 # Update in batch
 # Here I am updating the cells to appear as a hyperlink
 sh.update_cells(cell_list,value_input_option='USER_ENTERED')
+
+
+
+### Push second Dataframe
+
+
+wks2 = 'edge_attribute_source_' + date
+spreadsheet_key = '1O1cMmYGxoIqP6xbzj6FG5owiKQVg57wx2O_XIA_hN_A'
+#spreadsheet_key = '1sPpBIkxrHbQNiTm5oPs9-5KrjsyXcgaVAxknJj-u8pY'
+#wks_name = 'Workflow Progress Tracker_' + date
+d2g.upload(df2test, spreadsheet_key, wks2, credentials=credentials, row_names=True
+
+

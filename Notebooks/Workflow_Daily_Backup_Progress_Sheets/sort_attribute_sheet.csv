@@ -1,0 +1,86 @@
+A.0_RHOBTB2_direct,A.1_RHOBTB2,A.2_RHOBTB2_twohop,A.3_KCNMA1,A.8_EGFR_simple,A.9_EGFR_advanced,B.1a_DILI-three-hop-from-disease-or-phenotypic-feature_trapi,B.1b_DILI_three-hop-from-disease-or-phenotypic-feature_trapi,B.1c_DILI_three-hop-from-disease-or-phenotypic-feature_trapi,B.1e_DILI_three-hop-from-disease-or-phenotypic-feature_trapi,B.1f_DILI-three-hop-from-disease-or-phenotypic-feature_trapi,B.3_DILI-one-hop-from-genes,B.4_one-hop-gene-biological-process-or-activity_trapi,C.1_ChemSubstances_related_to_Disease,D.1_parkinsons-crohns,D.2_ssri-heart-disease,D.3_ssri-heart-disease-one-hop,D.4_tryptophan-kynurenine,D.6_metformin-ferritin
+,,,,,,,,,,,,,,,['ara-bte'],,,
+,,['ara-bte'],['ara-bte'],,,,,,,,,,,,['ara-bte'],,['ara-arax'],
+,,,,,,,,,,,,,,['ara-aragorn'],['ara-aragorn'],,,
+,,,,,,,,,,,,,['ara-bte'],,,['ara-bte'],,
+,,,,,,,,,,,,,,['ara-aragorn'],['ara-aragorn'],,,
+,,,,,,,,,,,,,,,['ara-bte'],,,
+,,,,,,,,,,,,,,['ara-aragorn'],,,,
+,,,,,,,,,,,,,,['ara-aragorn'],,,,
+,,,,,,,,,,,,,,['ara-aragorn'],['ara-aragorn'],,,
+,,,,,,,,,,,,,,['ara-aragorn'],,,,
+,,,,,,,,,,,,,,,,,,['ara-bte']
+,,,,,,,,,,,,,,,,['ara-bte'],,
+,,,,,,,,,,,,,,,['ara-bte'],['ara-bte'],,
+,,,,,,,,,,,,,,,['ara-bte'],,,
+,"['ara-arax', 'ara-bte']","['ara-arax', 'ara-bte']",,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,['ara-arax'],['ara-bte']
+,,,,,,,,,,,,,,['ara-aragorn'],,,,
+,,,,,,['ara-arax'],,['ara-arax'],['ara-arax'],['ara-arax'],,,,,,,,
+,['ara-aragorn'],,['ara-aragorn'],,,,,,,,['ara-aragorn'],['ara-aragorn'],['ara-aragorn'],['ara-aragorn'],['ara-aragorn'],['ara-aragorn'],,['ara-aragorn']
+,,['ara-robokop'],"['ara-aragorn', 'ara-robokop']",['ara-robokop'],,,,,,,"['ara-aragorn', 'ara-robokop']",['ara-aragorn'],['ara-aragorn'],['ara-aragorn'],['ara-aragorn'],['ara-aragorn'],,
+,['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],
+,,,,,,,,,,,,,,['ara-aragorn'],,,,
+,,['ara-bte'],"['ara-aragorn', 'ara-bte']",,,,,,,,['ara-aragorn'],,,['ara-aragorn'],"['ara-aragorn', 'ara-bte']",,,
+,,,,,,,,,,,,,,['ara-aragorn'],['ara-bte'],['ara-aragorn'],,
+,,['ara-bte'],['ara-aragorn'],,,,,,,,['ara-aragorn'],,,,"['ara-aragorn', 'ara-bte']",['ara-aragorn'],,
+,,,['ara-aragorn'],,,,,,,,['ara-aragorn'],,,,['ara-aragorn'],,,
+,,"['ara-arax', 'ara-bte']",['ara-aragorn'],,,,,,,,['ara-aragorn'],,,['ara-aragorn'],['ara-aragorn'],['ara-aragorn'],,
+,,,,,,,,,,,,,,,,,,['ara-aragorn']
+,,,,,,,,,,,,,,['ara-aragorn'],['ara-aragorn'],['ara-aragorn'],,
+,,,,,,,,,,,,,,['ara-aragorn'],,,,"['ara-aragorn', 'ara-bte']"
+,,['ara-bte'],"['ara-aragorn', 'ara-bte']",,,,,,,,['ara-aragorn'],,,['ara-aragorn'],"['ara-aragorn', 'ara-bte']",,,
+,,"['ara-bte', 'ara-robokop']","['ara-aragorn', 'ara-bte', 'ara-robokop']","['ara-bte', 'ara-robokop']",['ara-bte'],,,,,,"['ara-aragorn', 'ara-robokop']",,,['ara-aragorn'],"['ara-aragorn', 'ara-bte']",['ara-aragorn'],,"['ara-aragorn', 'ara-bte']"
+,,,,,,,,,,,,,,['ara-aragorn'],,,,"['ara-aragorn', 'ara-bte']"
+,,,,,,,,,,,,,,['ara-aragorn'],,['ara-aragorn'],,
+,,,,,,,,,,,,,,,,,['ara-improving'],['ara-improving']
+,,,,,,,,,,,,['ara-aragorn'],,,,,,
+,,['ara-arax'],"['ara-arax', 'kp-molecular']","['ara-arax', 'kp-molecular']","['ara-arax', 'kp-molecular']",,,,,,,['kp-molecular'],,"['ara-aragorn', 'ara-arax', 'ara-improving']",['ara-arax'],"['ara-aragorn', 'ara-arax', 'ara-bte', 'ara-improving']",,['ara-bte']
+,,['ara-improving'],,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,['ara-aragorn'],,,,
+,,,,,,,,,,,,,"['ara-aragorn', 'kp-cohd']",,,['kp-cohd'],,
+,,,['kp-chp'],,,,,,,,['kp-chp'],,,['ara-aragorn'],,,,
+,,['ara-bte'],"['ara-aragorn', 'ara-bte']",,,,,,,,['ara-aragorn'],,,['ara-aragorn'],"['ara-aragorn', 'ara-bte']",,,
+,,"['ara-bte', 'ara-robokop']","['ara-aragorn', 'ara-bte', 'ara-robokop']","['ara-bte', 'ara-robokop']",['ara-bte'],,,,,,"['ara-aragorn', 'ara-robokop']",,,,"['ara-aragorn', 'ara-bte']","['ara-aragorn', 'ara-bte']",,
+,,"['ara-arax', 'ara-bte']","['ara-aragorn', 'ara-arax', 'ara-bte', 'ara-unsecret', 'kp-molecular']","['ara-arax', 'kp-molecular']","['ara-arax', 'kp-molecular']",['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],,"['ara-aragorn', 'ara-arax', 'ara-unsecret', 'kp-molecular']",['kp-molecular'],,,"['ara-aragorn', 'ara-arax', 'ara-bte']",,['ara-arax'],
+,,,,,,,,,,,,,,"['ara-aragorn', 'ara-improving']","['ara-aragorn', 'ara-improving']",,,
+,,,,,,['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],,,,"['ara-aragorn', 'ara-arax']","['ara-aragorn', 'ara-arax', 'ara-bte']",,,
+,,['ara-arax'],"['ara-arax', 'kp-molecular']","['ara-arax', 'kp-molecular']","['ara-arax', 'kp-molecular']",,,,,,,['kp-molecular'],,,,,['ara-arax'],
+,,['ara-arax'],"['ara-aragorn', 'ara-arax', 'ara-unsecret', 'kp-molecular']","['ara-arax', 'kp-molecular']","['ara-arax', 'kp-molecular']",['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],,['kp-molecular'],,,"['ara-aragorn', 'ara-arax']",,['ara-arax'],['ara-aragorn']
+,,,,,,,,,,,,,,,,"['ara-aragorn', 'ara-bte', 'ara-improving']",,"['ara-bte', 'ara-improving']"
+,,,,,,,,,,,,,,,,['ara-aragorn'],,
+,,,,,,,,,,,,,,['ara-aragorn'],,,,
+,,,,,,,,,,,,,,"['ara-aragorn', 'ara-arax']",['ara-aragorn'],,,
+,,,,,,,,,,,,['ara-aragorn'],,,,,,
+,,,,,,,,,,,,['ara-arax'],,,,,['ara-arax'],
+,,"['ara-arax', 'ara-bte', 'ara-robokop']","['ara-aragorn', 'ara-arax', 'ara-bte', 'ara-unsecret', 'kp-molecular', 'ara-robokop']","['ara-arax', 'ara-bte', 'kp-molecular', 'ara-robokop']","['ara-arax', 'ara-bte', 'kp-molecular']",,,,,,"['ara-aragorn', 'ara-arax', 'ara-unsecret', 'kp-molecular', 'ara-robokop']",['kp-molecular'],,,"['ara-aragorn', 'ara-bte']",,,
+,,,,,,,,,,,,,,"['ara-aragorn', 'ara-improving']","['ara-aragorn', 'ara-improving']",,,
+,,"['ara-arax', 'ara-bte', 'ara-robokop']","['ara-aragorn', 'ara-bte', 'ara-robokop']",,,,,,,,"['ara-aragorn', 'ara-robokop']",,,['ara-aragorn'],"['ara-aragorn', 'ara-bte']",['ara-aragorn'],,
+,,['ara-arax'],"['ara-arax', 'kp-molecular']","['ara-arax', 'kp-molecular']","['ara-arax', 'kp-molecular']",,,,,,"['ara-arax', 'kp-molecular']",['kp-molecular'],,,,,['ara-arax'],
+['ara-improving'],['ara-improving'],['ara-improving'],['ara-improving'],['ara-improving'],['ara-improving'],,,,,,['ara-improving'],,,['ara-improving'],['ara-improving'],['ara-improving'],['ara-improving'],['ara-improving']
+,,,,,,,,,,,,,,,,,,"['ara-aragorn', 'ara-bte']"
+,,,,,,,,,,,,,,,,,['ara-improving'],
+['ara-improving'],"['ara-aragorn', 'ara-improving']","['ara-improving', 'ara-robokop']",['ara-improving'],['ara-improving'],['ara-improving'],,,,,,"['ara-aragorn', 'ara-improving', 'ara-robokop']",,,,"['ara-aragorn', 'ara-improving']",,,
+,,,,,,,,,,,,,,"['ara-aragorn', 'ara-improving']",,,,
+,,['ara-arax'],"['ara-aragorn', 'ara-arax', 'ara-unsecret', 'kp-molecular']","['ara-arax', 'kp-molecular']","['ara-arax', 'kp-molecular']",,,,,,"['ara-aragorn', 'ara-arax', 'ara-unsecret', 'kp-molecular']",['kp-molecular'],,,,,['ara-arax'],['ara-aragorn']
+,,,,,,,,,,,,,,,['ara-bte'],,,
+,,,,,,,,,,,,,,"['ara-aragorn', 'ara-arax']",,,,
+,,,,,,,,,,,,,,['ara-aragorn'],,,,"['ara-aragorn', 'ara-bte']"
+,,['ara-bte'],"['ara-aragorn', 'ara-bte']",,,,,,,,['ara-aragorn'],,,['ara-aragorn'],"['ara-aragorn', 'ara-bte']",,,
+,,,,,,,,,,,,['ara-arax'],,,,,['ara-arax'],
+,['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],,"['ara-aragorn', 'ara-arax']","['ara-aragorn', 'ara-arax']","['ara-aragorn', 'ara-arax']",['ara-arax'],['ara-aragorn']
+,"['ara-arax', 'ara-bte']","['ara-arax', 'ara-bte']",['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],,,"['ara-aragorn', 'ara-arax']","['ara-aragorn', 'ara-arax', 'ara-bte']","['ara-aragorn', 'ara-arax']",['ara-arax'],['ara-aragorn']
+,,,,,,,,,,,,,,,,['ara-aragorn'],,
+['ara-improving'],"['ara-aragorn', 'ara-improving']",['ara-improving'],['ara-improving'],['ara-improving'],['ara-improving'],,,,,,['ara-improving'],,,"['ara-aragorn', 'ara-improving']","['ara-aragorn', 'ara-improving']",['ara-improving'],['ara-improving'],"['ara-aragorn', 'ara-improving']"
+,,,,,,,,,,,,,,['ara-aragorn'],,['ara-aragorn'],,
+,,,,,,,,,,,,,,,,,['ara-arax'],['ara-aragorn']
+,,,,,,,,,,,,,,,,,,"['ara-aragorn', 'ara-improving']"
+,,"['ara-arax', 'ara-bte']",['ara-bte'],['ara-bte'],['ara-bte'],,,,,,,,,,['ara-bte'],,,['ara-bte']
+,,,,,,,,,,,,,,['ara-aragorn'],,,,"['ara-aragorn', 'ara-bte']"
+,,['ara-arax'],,,,['ara-arax'],,['ara-arax'],['ara-arax'],['ara-arax'],['ara-arax'],,,,,,['ara-arax'],
+,,['ara-improving'],,,,,,,,,,,,,,,,
+,,['ara-improving'],,,,,,,,,,,,,,,,
+,,['ara-improving'],,,,,,,,,,,,,,,,
+,,['ara-improving'],,,,,,,,,,,,,,,,
+,,['ara-improving'],,,,,,,,,,,,,,,,
+,,['ara-improving'],,,,,,,,,,,,,,,,
