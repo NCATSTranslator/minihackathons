@@ -1,9 +1,7 @@
 {
-    "message": {
-        "query_graph": {
             "nodes": {
                 "n0": {
-                     "ids": ["MESH:D006760"],
+                     "ids": ["MONDO:0005359"],
                      "categories": ["biolink:DiseaseOrPhenotypicFeature"]
                 },
                 "n1": {
@@ -14,6 +12,9 @@
                 },
                 "n3": {
                     "categories": ["biolink:ChemicalEntity"]
+                },
+                "n4": {
+                    "categories": ["biolink:BiologicalProcessOrActivity"]
                 }
             },
             "edges": {
@@ -31,9 +32,11 @@
                     "subject": "n2",
                     "object": "n3",
                     "predicates": ["biolink:related_to"]
+                },
+                "e04": {
+                    "subject": "n2",
+                    "object": "n4",
+                    "predicates": ["biolink:related_to"]
                 }
             }
-        }
-    }
 }
-
