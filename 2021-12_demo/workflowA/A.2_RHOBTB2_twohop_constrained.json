@@ -6,14 +6,15 @@
                     "object": "n0",
                     "subject": "n1",
                     "predicates": [
-                        "biolink:entity_positively_regulates_entity"
+                        "biolink:entity_regulates_entity",
+                        "biolink:genetically_interacts_with"
                     ]
                 },
                 "e02": {
                     "object": "n1",
                     "subject": "n2",
                     "predicates": [
-                        "biolink:decreases_amount_or_activity_of"
+                        "biolink:related_to"
                     ]
                 }
             },
@@ -34,6 +35,14 @@
                 "n2": {
                     "categories": [
                         "biolink:SmallMolecule"
+                    ] ,
+                    "constraints": [
+                        {
+                            "id": "biolink:highest_FDA_approval_status",
+                            "name": "highest FDA approval status",
+                            "operator": "==",
+                            "value": "regular approval"
+                        }
                     ]
                 }
             }
