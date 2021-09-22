@@ -6,15 +6,14 @@
                     "object": "n0",
                     "subject": "n1",
                     "predicates": [
-                        "biolink:entity_regulates_entity",
-                        "biolink:genetically_interacts_with"
+                        "biolink:entity_positively_regulates_entity"
                     ]
                 },
                 "e02": {
                     "object": "n1",
                     "subject": "n2",
                     "predicates": [
-                        "biolink:related_to"
+                        "biolink:decreases_amount_or_activity_of"
                     ]
                 }
             },
