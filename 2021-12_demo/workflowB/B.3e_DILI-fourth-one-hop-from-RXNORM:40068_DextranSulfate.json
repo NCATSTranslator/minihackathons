@@ -5,7 +5,6 @@
 				"n0": {
 					"ids": ["RXNORM:40068"],
 					"categories": [
-						"biolink:ChemicalEntity"
 					]
 				},
 				"n1": {
