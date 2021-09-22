@@ -1,0 +1,48 @@
+{
+    "message": {
+        "query_graph": {
+<<<<<<< HEAD:2021-12_demo/workflowC/C.1a_SmallMolecule_real_world_evidence_MultSclerosis.json
+=======
+            "edges": {
+                "e00": {
+                    "subject": "n01",
+                    "object": "n00",
+                    "predicates": [
+                        "biolink:has_real_world_evidence_of_association_with"
+                    ]
+                }
+            },
+>>>>>>> main:2021-12_demo/workflowC/C.1_ChemSubstances_related_to_Disease.json
+            "nodes": {
+                "n00": {
+                    "categories": [
+                        "biolink:Disease"
+                    ],
+                    "ids": [
+                        "MONDO:0005301"
+                    ],
+                    "is_set": false,
+                    "constraints": []
+                },
+                "n01": {
+                    "categories": [
+                        "biolink:SmallMolecule"
+                    ],
+                    "is_set": false,
+                    "constraints": []
+                }
+            },
+            "edges": {
+                "e00": {
+                    "subject": "n00",
+                    "object": "n01",
+                    "predicates": [
+                        "biolink:has_real_world_evidence_of_association_with"
+                    ],
+                    "constraints": [],
+                    "exclude": false
+                }
+            }
+        }
+    }
+}

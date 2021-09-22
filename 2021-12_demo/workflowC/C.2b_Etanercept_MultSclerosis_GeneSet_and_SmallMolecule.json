@@ -1,0 +1,95 @@
+{
+    "message": {
+        "query_graph": {
+            "nodes": {
+                "n0": {
+                    "categories": [
+                        "biolink:Gene"
+                    ],
+                    "is_set": true,
+                    "constraints": []
+                },
+                "n1": {
+                    "ids": [
+                        "CHEBI:4875"
+                    ],
+                    "categories": [
+                        "biolink:SmallMolecule"
+                    ],
+                    "is_set": false,
+                    "constraints": []
+                },
+                "n2": {
+                    "ids": [
+                        "MONDO:0005301"
+                    ],
+                    "categories": [
+                        "biolink:Disease"
+                    ],
+                    "is_set": false,
+                    "constraints": []
+                },
+                "n3": {
+                    "categories": [
+                        "biolink:SmallMolecule"
+                    ],
+                    "is_set": false,
+                    "constraints": []
+                }
+            },
+            "edges": {
+                "e01": {
+                    "predicates": [
+                        "biolink:interacts_with"
+                    ],
+                    "subject": "n0",
+                    "object": "n1",
+                    "constraints": [],
+                    "exclude": false
+                },
+                "e02": {
+                    "predicates": [
+                        "biolink:genetic_association"
+                    ],
+                    "subject": "n0",
+                    "object": "n2",
+                    "constraints": [],
+                    "exclude": false
+                },
+                "e03": {
+                    "predicates": [
+                        "biolink:interacts_with"
+                    ],
+                    "subject": "n0",
+                    "object": "n3",
+                    "constraints": [],
+                    "exclude": false
+                },
+                "N1": {
+                    "predicates": [
+                        "biolink:has_normalized_google_distance_with"
+                    ],
+                    "subject": "n3",
+                    "object": "n2",
+                    "constraints": []
+                },
+                "N2": {
+                    "predicates": [
+                        "biolink:has_normalized_google_distance_with"
+                    ],
+                    "subject": "n3",
+                    "object": "n1",
+                    "constraints": []
+                },
+                "N3": {
+                    "predicates": [
+                        "biolink:has_normalized_google_distance_with"
+                    ],
+                    "subject": "n2",
+                    "object": "n3",
+                    "constraints": []
+                }
+            }
+        }
+    }
+}
