@@ -1,4 +1,41 @@
 {
+    "workflow": [
+        {
+            "id": "fill"
+        },
+        {
+            "id": "bind"
+        },
+        {
+            "id": "overlay_compute_ngd",
+            "parameters": {
+                "virtual_relation_label": "N1",
+                "qnode_keys": [
+                    "n3",
+                    "n1"
+                ]
+            }
+        },
+        {
+            "id": "overlay_compute_ngd",
+            "parameters": {
+                "virtual_relation_label": "N2",
+                "qnode_keys": [
+                    "n2",
+                    "n3"
+                ]
+            }
+        },
+        {
+            "id": "complete_results"
+        },
+        {
+            "id": "filter_results_top_n",
+            "parameters": {
+                "max_results": 500
+            }
+        }
+    ],
     "message": {
         "query_graph": {
             "nodes": {
@@ -64,30 +101,6 @@
                     "object": "n3",
                     "constraints": [],
                     "exclude": false
-                },
-                "N1": {
-                    "predicates": [
-                        "biolink:has_normalized_google_distance_with"
-                    ],
-                    "subject": "n3",
-                    "object": "n2",
-                    "constraints": []
-                },
-                "N2": {
-                    "predicates": [
-                        "biolink:has_normalized_google_distance_with"
-                    ],
-                    "subject": "n3",
-                    "object": "n1",
-                    "constraints": []
-                },
-                "N3": {
-                    "predicates": [
-                        "biolink:has_normalized_google_distance_with"
-                    ],
-                    "subject": "n2",
-                    "object": "n3",
-                    "constraints": []
                 }
             }
         }
