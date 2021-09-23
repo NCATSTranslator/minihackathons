@@ -1,0 +1,39 @@
+{
+    "message": {
+        "query_graph": {
+            "nodes": {
+                "n00": {
+                    "categories": [
+                        "biolink:Disease"
+                    ],
+                    "ids": [
+                        "MONDO:0005301"
+                    ],
+                    "is_set": false,
+                    "constraints": []
+                },
+                "n01": {
+                    "categories": [
+                        "biolink:SmallMolecule"
+                    ],
+                    "ids": [
+                        "CHEMBL.COMPOUND:CHEMBL1428"
+                    ],
+                    "is_set": false,
+                    "constraints": []
+                }
+            },
+            "edges": {
+                "e00": {
+                    "subject": "n00",
+                    "object": "n01",
+                    "predicates": [
+                        "biolink:related_to"
+                    ],
+                    "constraints": [],
+                    "exclude": false
+                }
+            }
+        }
+    }
+}
