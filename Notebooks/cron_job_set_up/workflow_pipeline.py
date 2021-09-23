@@ -13,6 +13,9 @@ Read all the JSON files for all the workflows and print out the messages and que
 """
 # import all the modules. NB: submit_run_ars_modules contains all the modules to submit job to ARAX
 
+
+## Pending setup up the cron job for sync and async...also clean the codes 
+
 from datetime import datetime
 import json
 import requests
