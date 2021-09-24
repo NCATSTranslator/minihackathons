@@ -6,7 +6,8 @@
 					"ids": ["RXNORM:40068"],
 					"categories": [
 						"biolink:ChemicalEntity"
-					]
+					],
+                    "name": "DextranSulfate"
 				},
 				"n1": {
 					"categories": [
