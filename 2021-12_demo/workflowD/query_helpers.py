@@ -1,3 +1,4 @@
+from collections import defaultdict
 import json
 from typing import Any, Dict, Iterable, List, Set, Tuple, Union
 from urllib.parse import urlencode  
@@ -21,9 +22,13 @@ ARS_RESP_KEY_STATUS = 'status'
 ARS_STATUS_DONE = 'Done'
 ARS_STATUS_ERROR = 'Error'
 ARS_TRACE_PARAMS = {ARS_QUERY_ARG_TRACE: 'y'}
-ARS_URL = 'https://ars.transltr.io/ars/api'
-ARS_URL_MESSAGES = f'{ARS_URL}/messages/'
-ARS_URL_SUBMIT = f'{ARS_URL}/submit'
+ARS_URL_DEV = 'https://ars-dev.transltr.io/ars/api/'
+ARS_URL_PROD = 'https://ars.transltr.io/ars/api/'
+ARS_URL_PATH_MESSAGES = 'messages/'
+ARS_URL_PATH_SUBMIT = 'submit'
+
+KEY_CURIE = 'curie'
+KEY_FOUND_IN_AGENTS = 'found_in_agents'
 
 SRI_NN_BASE_URL = 'https://nodenormalization-sri.renci.org/1.2/'
 SRI_NN_CURIE_IDENTIFER = 'curie'
@@ -33,8 +38,13 @@ SRI_NN_RESPONSE_VALUE_ID = 'id'
 SRI_NN_RESPONSE_VALUE_IDENTIFIER = 'identifier'
 SRI_NN_RESPONSE_VALUE_LABEL = 'label'
 
+TRAPI_RESP_EDGE_BINDINGS = 'edge_bindings'
+TRAPI_RESP_EDGES = 'edges'
+TRAPI_RESP_ID = 'id'
+TRAPI_RESP_KNOWLEDGE_GRAPH = 'knowledge_graph'
 TRAPI_RESP_NODE_BINDINGS = 'node_bindings'
-TRAPI_RESP_QNODE_ID = 'id'
+TRAPI_RESP_PREDICATE = 'predicate'
+TRAPI_RESP_RESULTS = 'results'
 
 class MiniNodeNormalizer:
     '''A mini version of imProving Agent's SRI Node Normalizer client'''
@@ -170,7 +180,7 @@ def _print_arax_url(pk: str) -> None:
     )
 
 
-def submit_to_ars(query: Dict[str, Any]) -> str:
+def submit_to_ars(query: Dict[str, Any], ars_url: str = ARS_URL_PROD) -> str:
     '''Submits TRAPI `query` to ARS and returns the PK associated with
     the request
 
@@ -178,8 +188,11 @@ def submit_to_ars(query: Dict[str, Any]) -> str:
     ----------
     query:
         A valid TRAPI query that compiles to JSON
+
+    ars_url:
+        Which ARS URL to use, e.g. dev vs prod
     '''
-    r = requests.post(ARS_URL_SUBMIT, json=query)
+    r = requests.post(f'{ars_url}{ARS_URL_PATH_SUBMIT}', json=query)
     try:
         r.raise_for_status()
     except requests.exceptions.HTTPError as e:
@@ -191,12 +204,16 @@ def submit_to_ars(query: Dict[str, Any]) -> str:
 
     return ars_pk
 
-def _get_ars_result(message_id: str, **kwargs) -> Dict[str, Any]:
+def _get_ars_result(
+    message_id: str,
+    ars_url: str = ARS_URL_PROD,
+    **kwargs
+) -> Dict[str, Any]:
     '''Returns decoded JSON associated with `message_id`
     
     Use kwargs to pass query string args
     '''
-    r = requests.get(f'{ARS_URL_MESSAGES}{message_id}', params=kwargs)
+    r = requests.get(f'{ars_url}{ARS_URL_PATH_MESSAGES}{message_id}', params=kwargs)
     try:
         r.raise_for_status()
     except requests.exceptions.HTTPError as e:
@@ -206,7 +223,7 @@ def _get_ars_result(message_id: str, **kwargs) -> Dict[str, Any]:
     return r.json()
 
 
-def _get_agent_response(child: Dict[str, Any]) -> Tuple[str, Dict[str, Any]]:
+def _get_agent_response(child: Dict[str, Any], ars_url: str) -> Tuple[str, Dict[str, Any]]:
     '''Returns the agent name and results from an individual agent in
      the ARS's 'children' field
     
@@ -219,7 +236,7 @@ def _get_agent_response(child: Dict[str, Any]) -> Tuple[str, Dict[str, Any]]:
     agent = child[ARS_RESP_KEY_ACTOR][ARS_RESP_KEY_AGENT]
 
     if child[ARS_RESP_KEY_STATUS] == ARS_STATUS_DONE:
-        child_response = _get_ars_result(child[ARS_RESP_KEY_MESSAGE])
+        child_response = _get_ars_result(child[ARS_RESP_KEY_MESSAGE], ars_url=ars_url)
         child_message = child_response[ARS_RESP_KEY_FIELDS][ARS_RESP_KEY_DATA][ARS_RESP_KEY_MESSAGE]
         
     else:
@@ -232,14 +249,14 @@ def _get_agent_response(child: Dict[str, Any]) -> Tuple[str, Dict[str, Any]]:
     return agent, child_message
 
 
-def get_ars_results(pk: str):
+def get_ars_results(pk: str, ars_url: str = ARS_URL_PROD):
     '''Returns ARS results from the `pk` of a query submitted to the ARS'''
-    ars_results = _get_ars_result(pk, **ARS_TRACE_PARAMS)
+    ars_results = _get_ars_result(pk,  ars_url=ars_url, **ARS_TRACE_PARAMS)
     print(f'ARS query status: {ars_results[ARS_RESP_KEY_STATUS]}')
 
     agent_results = {}
     for child in ars_results[ARS_RESP_KEY_CHILDREN]:
-        agent, message = _get_agent_response(child)
+        agent, message = _get_agent_response(child, ars_url=ars_url)
         agent_results[agent] = message
 
     return agent_results
@@ -254,6 +271,40 @@ def expand_expected_results(
     
     return expanded_expected_results
 
+def _get_predicates_from_agent_response(agent_message: Dict[str, Any]) -> Set[str]:
+    '''Returns a mapping of qedge_id -> set of all predicates found in
+    the results of a single agent message
+    '''
+    if TRAPI_RESP_RESULTS not in agent_message:
+        return {}
+    predicates = defaultdict(set)
+    for result in agent_message[TRAPI_RESP_RESULTS]:
+        for edge_id, edges in result[TRAPI_RESP_EDGE_BINDINGS].items():
+            for edge in edges:
+                predicates[edge_id].add(
+                    agent_message[TRAPI_RESP_KNOWLEDGE_GRAPH][TRAPI_RESP_EDGES][edge[TRAPI_RESP_ID]][TRAPI_RESP_PREDICATE]
+            )
+
+    return predicates
+
+def get_predicates_from_agent_responses(
+    ars_results: Dict[str, Any]
+) -> Dict[str, Dict[str, Set[str]]]: 
+    '''Returns a mapping of qedge_id -> {predicate: {agents-where-found}}
+    
+    A wrapper on `_get_predicates_from_agent_response` to iterate across
+    all agent responses
+    '''
+    predicates = defaultdict(lambda: defaultdict(set))
+    for agent, result_message in ars_results.items():
+        agent_predicates = _get_predicates_from_agent_response(result_message)
+        if not agent_predicates:
+            continue
+        for qedge_id, result_predicates in agent_predicates.items():
+            for result_predicate in result_predicates:
+                predicates[qedge_id][result_predicate].add(agent)
+    
+    return predicates
 
 def _find_expected_results(
     agent_message: Dict[str, Any],
@@ -304,7 +355,7 @@ def _find_expected_results(
             if qnode_id not in expected_results:
                 continue
             for node_binding in node_bindings:
-                if node_binding[TRAPI_RESP_QNODE_ID] in expected_results[qnode_id]:
+                if node_binding[TRAPI_RESP_ID] in expected_results[qnode_id]:
                     result_positive_nodes.add(qnode_id)
         
         if any_or_all == 'all':
@@ -350,18 +401,21 @@ def get_all_results(ars_results: Dict[str, Any]) -> Dict[str, Any]:
 
 def unify_results(
     agent_results: Dict[str, Any],
-    qnode_id_of_interest: str
+    qnode_id_of_interest: str,
+    async_: bool = False
 ) -> Dict[str, Dict[str, Union[str, List[str]]]]:
     unified_results = {}
     for agent, results in agent_results.items():
+        if async_ is True:
+            agent = f'{agent}-async'
         for result in results:
             nodes_of_interest = result[TRAPI_RESP_NODE_BINDINGS][qnode_id_of_interest]
-            entity_name_map = _get_name_of_nodes([node[TRAPI_RESP_QNODE_ID] for node in nodes_of_interest])
+            entity_name_map = _get_name_of_nodes([node[TRAPI_RESP_ID] for node in nodes_of_interest])
             for entity, name in entity_name_map.items():
                 if name in unified_results:
-                    unified_results[name]['found_in_agents'].add(agent)
+                    unified_results[name][KEY_FOUND_IN_AGENTS].add(agent)
                 else:
-                    unified_results[name] = {'curie': entity, 'found_in_agents': set([agent])}
+                    unified_results[name] = {KEY_CURIE: entity, KEY_FOUND_IN_AGENTS: set([agent])}
     
     return unified_results
 
@@ -369,8 +423,21 @@ def print_unified_results(unified_results: Dict[str, Dict[str, Union[str, Set[st
     '''Pretty prints unified_results'''
     for node_name, data in unified_results.items():
         print(f'{node_name}:')
-        print(f'  CURIE: {data["curie"]}')
+        print(f'  CURIE: {data[KEY_CURIE]}')
         print('  Found in agents:')
-        for agent in data['found_in_agents']:
+        for agent in data[KEY_FOUND_IN_AGENTS]:
+            print(f'    {agent}')
+        print()
+
+
+def print_edge_results(
+    results: Dict[str, Dict[str, Set[str]]],
+    qedge_id_of_interest: str
+) -> None:
+    '''Pretty prints edge results'''
+    for predicate, agents in results[qedge_id_of_interest].items():
+        print(f'{predicate}:')
+        print('  Found in agents:')
+        for agent in agents:
             print(f'    {agent}')
         print()
