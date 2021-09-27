@@ -1,4 +1,4 @@
-Workflow,Curie ,N (size of list of results),Query node ID,Include/Exclude,,
+Workflow,Curie,N (size of list of results),Query node ID,Include/Exclude,,
 A.0_RHOBTB2_direct.json,PUBCHEM.COMPOUND:2950270,10,n1,Include,,"Note: this example row means that for workflow A.0_RHOBTB2_direct.json, we require that PUBCHEM.COMPOUND:2950270 is included in the top 10 results."
 B.1a_DILI-three-hop-from-MONDO:0005359_DILI.json,RXNORM:155067,500,n3,Include,,Equivalent identifiers are equally acceptable
 B.1b_DILI_three-hop-from-SNOMEDCT:197358007_ToxicLiverDiseaseAcuteHepatitis.json,RXNORM:155067,500,n3,Include,,Equivalent identifiers are equally acceptable
@@ -8,18 +8,6 @@ B.1c_DILI_three-hop-from-MESH:D056487_ChronicDILI.json,RXNORM:155067,500,n3,Incl
 B.1c_DILI_three-hop-from-MESH:D056487_ChronicDILI.json,CHEMBL.COMPOUND:CHEMBL165,500,n3,Include,,Equivalent identifiers are equally acceptable
 B.1c_DILI_three-hop-from-MESH:D056487_ChronicDILI.json,CHEMBL.COMPOUND:CHEMBL116438,500,n3,Include,,Equivalent identifiers are equally acceptable
 B.1d_DILI_three-hop-from-SNOMEDCT:197354009_ToxicLiverDisease.json,CHEMBL.COMPOUND:CHEMBL1698267,500,n3,Include,,"Equivalent identifiers are equally acceptable; Note that the CURIE was returned as ""SID26755471"""
-B.3a_DILI-fourth-one-hop-from-CHEBI:41879_Dexamethasone.json,,,,,,Note that this query should return numerous responses from most/all clinical KPs
-B.3b_DILI-fourth-one-hop-from-MESH:D000077185_Resveratrol.json,,,,,,"Note that this query should return results from COHD, as that service has data on N=321 patients prescribed resveratrol"
-"B.3e_DILI-fourth-one-hop-from-
-PUBCHEM.COMPOUND:5755_Prednisone.json",,,,,,Note that this query should return an unmanageable number of results; operations such as ranking will be required
-B.3f_DILI-fourth-one-hop-from-PUBCHEM.COMPOUND:5877_Methylprednisone.json,,,,,,Note that this query should return an unmanageable number of results; operations such as ranking will be required
-B.4a_DILI-fourth-one-hop-from-CHEBI:41879_Dexamethasone.json,,,,,,Note that this query should return an unmanageable number of results; operations such as ranking will be required
-B.4b_DILI-fourth-one-hop-from-MESH:D000077185_Resveratrol.json,,,,,,Note that this query should return an unmanageable number of results; operations such as ranking will be required
-B.4c_DILI-fourth-one-hop-from-MESH:D000077385_Silybin.json,,,,,,Note that this query should return an unmanageable number of results; operations such as ranking will be required
-B.4d_DILI-fourth-one-hop-from-MESH:D003474_Curcumin.json,,,,,,Note that this query should return an unmanageable number of results; operations such as ranking will be required
-"B.4e_DILI-fourth-one-hop-from-
-PUBCHEM.COMPOUND:5755_Prednisone.json",,,,,,Note that this query should return an unmanageable number of results; operations such as ranking will be required
-B.4f_DILI-fourth-one-hop-from-PUBCHEM.COMPOUND:5877_Methylprednisone.json,,,,,,Note that this query should return an unmanageable number of results; operations such as ranking will be required
 D.1_parkinsons-crohns.json,NCBIGene:120892,,n01,include,,LRRK2
 D.1_parkinsons-crohns.json,NCBIGene:11315,,n01,include,,PARK7
 D.1_parkinsons-crohns.json,NCBIGene:110357,,n01,include,,MOD2

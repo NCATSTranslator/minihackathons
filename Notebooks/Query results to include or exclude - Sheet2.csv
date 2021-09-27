@@ -1,0 +1,16 @@
+Workflow,Curie,N (size of list of results),Query node ID,Include/Exclude,,
+A.0_RHOBTB2_direct.json,PUBCHEM.COMPOUND:2950270,10,n1,Include,,"Note: this example row means that for workflow A.0_RHOBTB2_direct.json, we require that PUBCHEM.COMPOUND:2950270 is included in the top 10 results."
+B.1a_DILI-three-hop-from-MONDO:0005359_DILI.json,RXNORM:155067,500,n3,Include,,Equivalent identifiers are equally acceptable
+B.1b_DILI_three-hop-from-SNOMEDCT:197358007_ToxicLiverDiseaseAcuteHepatitis.json,"RXNORM:155067, CHEMBL.COMPOUND:CHEMBL1698267, RXNORM:40068",500,n3,Include,,Equivalent identifiers are equally acceptable
+B.1c_DILI_three-hop-from-MESH:D056487_ChronicDILI.json,"RXNORM:155067, CHEMBL.COMPOUND:CHEMBL165, CHEMBL.COMPOUND:CHEMBL116438",500,n3,Include,,Equivalent identifiers are equally acceptable
+B.1d_DILI_three-hop-from-SNOMEDCT:197354009_ToxicLiverDisease.json,CHEMBL.COMPOUND:CHEMBL1698267,500,n3,Include,,"Equivalent identifiers are equally acceptable; Note that the CURIE was returned as ""SID26755471"""
+D.1_parkinsons-crohns.json,"NCBIGene:120892, NCBIGene:11315, NCBIGene:110357",,n01,include,,LRRK2
+D.2_ssri-heart-disease.json,"NCBIGene:3988, NCBIGene:7043, NCBIGene:5627",,n01,include,,LIPA
+D.3_ssri-heart-disease-one-hop.json,N/A,,e00,include,,any clinical edge
+D.4_tryptophan-kyurenine.json,REACT:R-HSA-888614,,n02,include,,IDO
+D.4_tryptophan-kyurenine.json,KEGG:1.13.11.52,,n02,include,,IDO
+D.4_tryptophan-kyurenine.json,REACT:R-HSA-888614,,n03,include,,IDO
+D.4_tryptophan-kyurenine.json,KEGG:1.13.11.52,,n03,include,,IDO
+D.6_metformin-ferritin.json,UniProtKB:P54646,,n01,include,,AAPK protein
+D.6_metformin-ferritin.json,NCBIGene:5563,,n01,include,,AMPK gene
+D.6_metformin-ferritin.json,UniProtKB:P42345,,n02,include,,MTOR protein
