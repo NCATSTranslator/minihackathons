@@ -3,7 +3,7 @@
         "query_graph": {
             "nodes": {
                 "n0": {
-                    "ids": ["PUBCHEM.COMPOUND:5755"],
+                    "ids": ["PUBCHEM.COMPOUND:5865"],
                     "categories": [
                         "biolink:ChemicalEntity"
                     ],
