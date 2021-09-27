@@ -1,0 +1,108 @@
+{
+    "workflow": [
+        {
+            "id": "fill"
+        },
+        {
+            "id": "bind"
+        },
+        {
+            "id": "overlay_compute_ngd",
+            "parameters": {
+                "virtual_relation_label": "N1",
+                "qnode_keys": [
+                    "n3",
+                    "n1"
+                ]
+            }
+        },
+        {
+            "id": "overlay_compute_ngd",
+            "parameters": {
+                "virtual_relation_label": "N2",
+                "qnode_keys": [
+                    "n2",
+                    "n3"
+                ]
+            }
+        },
+        {
+            "id": "complete_results"
+        },
+        {
+            "id": "filter_results_top_n",
+            "parameters": {
+                "max_results": 500
+            }
+        }
+    ],
+    "message": {
+        "query_graph": {
+            "nodes": {
+                "n0": {
+                    "categories": [
+                        "biolink:Gene"
+                    ],
+                    "is_set": true,
+                    "constraints": []
+                },
+                "n1": {
+                    "ids": [
+                        "[CURIE-FOR-SPECIFIC-DRUG-FROM-QUERY-C1-RESULTS]"
+                    ],
+                    "categories": [
+                        "biolink:SmallMolecule"
+                    ],
+                    "is_set": false,
+                    "constraints": []
+                },
+                "n2": {
+                    "ids": [
+                        "[CURIE-FOR-SPECIFIC-DISEASE-IN-QUERY-C1]"
+                    ],
+                    "categories": [
+                        "biolink:Disease"
+                    ],
+                    "is_set": false,
+                    "constraints": []
+                },
+                "n3": {
+                    "categories": [
+                        "biolink:SmallMolecule"
+                    ],
+                    "is_set": false,
+                    "constraints": []
+                }
+            },
+            "edges": {
+                "e01": {
+                    "predicates": [
+                        "biolink:interacts_with"
+                    ],
+                    "subject": "n0",
+                    "object": "n1",
+                    "constraints": [],
+                    "exclude": false
+                },
+                "e02": {
+                    "predicates": [
+                        "biolink:genetic_association"
+                    ],
+                    "subject": "n0",
+                    "object": "n2",
+                    "constraints": [],
+                    "exclude": false
+                },
+                "e03": {
+                    "predicates": [
+                        "biolink:interacts_with"
+                    ],
+                    "subject": "n0",
+                    "object": "n3",
+                    "constraints": [],
+                    "exclude": false
+                }
+            }
+        }
+    }
+}
