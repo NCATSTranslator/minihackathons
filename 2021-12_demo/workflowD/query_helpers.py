@@ -234,12 +234,14 @@ def _get_agent_response(child: Dict[str, Any], ars_url: str) -> Tuple[str, Dict[
         ARS's 'children' field in a `_get_ars_result` response
     '''
     agent = child[ARS_RESP_KEY_ACTOR][ARS_RESP_KEY_AGENT]
-
-    if child[ARS_RESP_KEY_STATUS] == ARS_STATUS_DONE:
-        child_response = _get_ars_result(child[ARS_RESP_KEY_MESSAGE], ars_url=ars_url)
-        child_message = child_response[ARS_RESP_KEY_FIELDS][ARS_RESP_KEY_DATA][ARS_RESP_KEY_MESSAGE]
-        
-    else:
+    try:
+        if child[ARS_RESP_KEY_STATUS] == ARS_STATUS_DONE:
+            child_response = _get_ars_result(child[ARS_RESP_KEY_MESSAGE], ars_url=ars_url)
+            child_message = child_response[ARS_RESP_KEY_FIELDS][ARS_RESP_KEY_DATA][ARS_RESP_KEY_MESSAGE]
+        else:
+            child_message = {}
+    except Exception as e:
+        print(f'Error retrieving response from {agent=}')
         child_message = {}
     
     child_results = child_message.get(ARS_RESP_KEY_RESULTS)
