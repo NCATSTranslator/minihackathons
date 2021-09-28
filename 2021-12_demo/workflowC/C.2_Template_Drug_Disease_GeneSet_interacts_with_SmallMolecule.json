@@ -43,8 +43,7 @@
                     "categories": [
                         "biolink:Gene"
                     ],
-                    "is_set": true,
-                    "constraints": []
+                    "is_set": true
                 },
                 "n1": {
                     "ids": [
@@ -53,8 +52,7 @@
                     "categories": [
                         "biolink:SmallMolecule"
                     ],
-                    "is_set": false,
-                    "constraints": []
+                    "is_set": false
                 },
                 "n2": {
                     "ids": [
@@ -63,15 +61,13 @@
                     "categories": [
                         "biolink:Disease"
                     ],
-                    "is_set": false,
-                    "constraints": []
+                    "is_set": false
                 },
                 "n3": {
                     "categories": [
                         "biolink:SmallMolecule"
                     ],
-                    "is_set": false,
-                    "constraints": []
+                    "is_set": false
                 }
             },
             "edges": {
@@ -80,27 +76,21 @@
                         "biolink:interacts_with"
                     ],
                     "subject": "n0",
-                    "object": "n1",
-                    "constraints": [],
-                    "exclude": false
+                    "object": "n1"
                 },
                 "e02": {
                     "predicates": [
                         "biolink:genetic_association"
                     ],
                     "subject": "n0",
-                    "object": "n2",
-                    "constraints": [],
-                    "exclude": false
+                    "object": "n2"
                 },
                 "e03": {
                     "predicates": [
                         "biolink:interacts_with"
                     ],
                     "subject": "n0",
-                    "object": "n3",
-                    "constraints": [],
-                    "exclude": false
+                    "object": "n3"
                 }
             }
         }

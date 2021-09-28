@@ -71,15 +71,13 @@ Results: https://arax.ncats.io/?r=27565
                     "ids": [
                         "MONDO:0005301"
                     ],
-                    "is_set": false,
-                    "constraints": []
+                    "is_set": false
                 },
                 "n01": {
                     "categories": [
                         "biolink:SmallMolecule"
                     ],
-                    "is_set": false,
-                    "constraints": []
+                    "is_set": false
                 }
             },
             "edges": {
@@ -88,9 +86,7 @@ Results: https://arax.ncats.io/?r=27565
                     "object": "n01",
                     "predicates": [
                         "biolink:has_real_world_evidence_of_association_with"
-                    ],
-                    "constraints": [],
-                    "exclude": false
+                    ]
                 }
             }
         }
@@ -148,8 +144,7 @@ Results: https://arax.ncats.io/?r=27108
                     "categories": [
                         "biolink:Gene"
                     ],
-                    "is_set": true,
-                    "constraints": []
+                    "is_set": true
                 },
                 "n1": {
                     "ids": [
@@ -158,8 +153,7 @@ Results: https://arax.ncats.io/?r=27108
                     "categories": [
                         "biolink:SmallMolecule"
                     ],
-                    "is_set": false,
-                    "constraints": []
+                    "is_set": false
                 },
                 "n2": {
                     "ids": [
@@ -168,15 +162,13 @@ Results: https://arax.ncats.io/?r=27108
                     "categories": [
                         "biolink:Disease"
                     ],
-                    "is_set": false,
-                    "constraints": []
+                    "is_set": false
                 },
                 "n3": {
                     "categories": [
                         "biolink:SmallMolecule"
                     ],
-                    "is_set": false,
-                    "constraints": []
+                    "is_set": false
                 }
             },
             "edges": {
@@ -185,27 +177,21 @@ Results: https://arax.ncats.io/?r=27108
                         "biolink:interacts_with"
                     ],
                     "subject": "n0",
-                    "object": "n1",
-                    "constraints": [],
-                    "exclude": false
+                    "object": "n1"
                 },
                 "e02": {
                     "predicates": [
                         "biolink:genetic_association"
                     ],
                     "subject": "n0",
-                    "object": "n2",
-                    "constraints": [],
-                    "exclude": false
+                    "object": "n2"
                 },
                 "e03": {
                     "predicates": [
                         "biolink:interacts_with"
                     ],
                     "subject": "n0",
-                    "object": "n3",
-                    "constraints": [],
-                    "exclude": false
+                    "object": "n3"
                 }
             }
         }
@@ -229,8 +215,7 @@ Results: https://arax.ncats.io/?r=b7a43315-377e-40c9-9f6b-c92a8295f7d2
                     "ids": [
                         "MONDO:0005301"
                     ],
-                    "is_set": false,
-                    "constraints": []
+                    "is_set": false
                 },
                 "n01": {
                     "categories": [
@@ -239,8 +224,7 @@ Results: https://arax.ncats.io/?r=b7a43315-377e-40c9-9f6b-c92a8295f7d2
                     "ids": [
                         "CHEMBL.COMPOUND:CHEMBL1487"
                     ],
-                    "is_set": false,
-                    "constraints": []
+                    "is_set": false
                 }
             },
             "edges": {
@@ -249,9 +233,7 @@ Results: https://arax.ncats.io/?r=b7a43315-377e-40c9-9f6b-c92a8295f7d2
                     "object": "n01",
                     "predicates": [
                         "biolink:related_to"
-                    ],
-                    "constraints": [],
-                    "exclude": false
+                    ]
                 }
             }
         }

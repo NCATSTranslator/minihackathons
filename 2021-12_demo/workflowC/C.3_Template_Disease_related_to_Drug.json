@@ -9,8 +9,7 @@
                     "ids": [
                         "[CURIE-FOR-SPECIFIC-DISEASE-IN-QUERIES-C1-C2]"
                     ],
-                    "is_set": false,
-                    "constraints": []
+                    "is_set": false
                 },
                 "n01": {
                     "categories": [
@@ -19,8 +18,7 @@
                     "ids": [
                         "[CURIE-FOR-SPECIFIC-DRUG-FROM-QUERY-C2-RESULTS]"
                     ],
-                    "is_set": false,
-                    "constraints": []
+                    "is_set": false
                 }
             },
             "edges": {
@@ -29,9 +27,7 @@
                     "object": "n01",
                     "predicates": [
                         "biolink:related_to"
-                    ],
-                    "constraints": [],
-                    "exclude": false
+                    ]
                 }
             }
         }
