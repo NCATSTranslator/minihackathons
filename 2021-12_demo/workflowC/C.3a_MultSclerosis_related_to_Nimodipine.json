@@ -9,8 +9,7 @@
                     "ids": [
                         "MONDO:0005301"
                     ],
-                    "is_set": false,
-                    "constraints": []
+                    "is_set": false
                 },
                 "n01": {
                     "categories": [
@@ -19,8 +18,7 @@
                     "ids": [
                         "CHEMBL.COMPOUND:CHEMBL1428"
                     ],
-                    "is_set": false,
-                    "constraints": []
+                    "is_set": false
                 }
             },
             "edges": {
@@ -29,9 +27,7 @@
                     "object": "n01",
                     "predicates": [
                         "biolink:related_to"
-                    ],
-                    "constraints": [],
-                    "exclude": false
+                    ]
                 }
             }
         }

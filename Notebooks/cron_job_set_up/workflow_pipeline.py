@@ -63,7 +63,7 @@ def submit_to_ars(m,ars_url='https://ars.transltr.io/ars/api',arax_url='https://
 
 ##https://ars.ci.transltr.io/ars/api
 
-def retrieve_ars_results(mid,ars_url='https://ars.transltr.io/ars/api'):
+def retrieve_ars_results(mid, name, check_sheet, ars_url='https://ars.transltr.io/ars/api'):
     pk = 'https://arax.ncats.io/?source=ARS&id=' + mid
     message_url = f'{ars_url}/messages/{mid}?trace=y'
     response = requests.get(message_url)
@@ -72,6 +72,7 @@ def retrieve_ars_results(mid,ars_url='https://ars.transltr.io/ars/api'):
     results = {}
     dictionary = {}
     dictionary_2 = {}
+    dict3 = {}
     for child in j['children']:
         print(child['status'])
         error_code = child['code']
@@ -85,6 +86,41 @@ def retrieve_ars_results(mid,ars_url='https://ars.transltr.io/ars/api'):
                 if nresults > 0:
                     results[child['actor']['agent']] = {'message':child_response['fields']['data']['message']}
                     
+                    if name in list(check_sheet.Workflow):
+                        print(name)
+                        dfy = check_sheet[check_sheet['Workflow']== name]
+
+                        dfy.reset_index(drop=True)
+
+                        for index,curie_id in enumerate(dfy.Curie):
+                            print(index,curie_id)
+                            node_num = dfy.iloc[index][3]
+                            query_id = curie_id
+                            if np.isnan(dfy.iloc[index][2]) == True:
+                                len_check = len(child_response['fields']['data']['message']['results'])
+                            else:
+                                len_check = dfy.iloc[index][2]
+
+                            #print(node_num, query_id, len_check)
+
+                            locs = []
+                            for x, val in enumerate(child_response['fields']['data']['message']['results']):
+                                #print(val)
+
+                                if x < len_check:
+
+                                    if query_id in val['node_bindings'][node_num][0]['id']:
+                                        locs.append(x)
+                            if not locs:
+                                check_result = f'False'
+                                print(check_result)
+                                #pass
+                            else:
+                                check_result = f'True'
+                                print('curie id:', query_id, ': INCLUDED at postion N ==', locs, 'on', node_num)
+
+                            dict3[curie_id] = check_result    
+
                 if child_response['fields']['data']['message']['knowledge_graph']['edges']:
                     if child_response['fields']['data']['message']['knowledge_graph']['edges'].keys():
                             edge_ex = child_response['fields']['data']['message']['knowledge_graph']['edges']
@@ -133,7 +169,7 @@ def retrieve_ars_results(mid,ars_url='https://ars.transltr.io/ars/api'):
             nresults = 0
             #dictionary_2[child['actor']['agent']] = []
             
-        dictionary['pk'] =  pk  
+        dictionary['pk_id'] =  pk  
             
         if ((child['status'] == 'Done') & (nresults == 0)):
             dictionary[child['actor']['agent']] = 'No Results' ': ' + str(error_code)
@@ -145,7 +181,7 @@ def retrieve_ars_results(mid,ars_url='https://ars.transltr.io/ars/api'):
             #test =  [child['actor']['agent'], 'ARS Error']
         elif ((child['status'] == 'Done') & (nresults != 0)):
             #test =  [child['actor']['agent'], 'Results']
-            dictionary[child['actor']['agent']] = 'Results' ': ' + str(error_code)
+            dictionary[child['actor']['agent']] = 'Results' ': ' + str(error_code) + ' ' + str(dict3)
         elif ((child['status'] == 'Unknown') & (nresults == 0)):
             #test =  [child['actor']['agent'], 'Results']
             dictionary[child['actor']['agent']] = 'Unknown' ': ' + str(error_code)
