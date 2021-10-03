@@ -7,13 +7,16 @@ B.1_DILI-three-hop-interacts-with.json,MESH:D003474,500,n3,Include,,Equivalent i
 B.1_DILI-three-hop-interacts-with.json,RXNORM:40068,500,n3,Include,,Equivalent identifiers are equally acceptable
 B.1_DILI-three-hop-interacts-with.json,PUBCHEM.COMPOUND:5877,500,n3,Include,,Equivalent identifiers are equally acceptable
 B.1_DILI-three-hop-interacts-with.json,PUBCHEM.COMPOUND:5755,500,n3,Include,,Equivalent identifiers are equally acceptable
+C.1a_SmallMolecule_real_world_evidence_MultSclerosis.json,MONDO:0005301,100,n00,include,,
+C.2a_Imatinib_MultSclerosis_GeneSet_and_SmallMolecule.json,CHEBI:45783,100,n3,include,,
+C.2b_Etanercept_MultSclerosis_GeneSet_and_SmallMolecule.json,CHEBI:4875,100,n3,include,,
+C.2c_Natalizumab_MultSclerosis_GeneSet_and_SmallMolecule.json,CHEMBL.COMPOUND:CHEMBL1201607,100,n3,include,,
 D.1_parkinsons-crohns.json,NCBIGene:120892,,n01,include,,LRRK2
 D.1_parkinsons-crohns.json,NCBIGene:11315,,n01,include,,PARK7
 D.1_parkinsons-crohns.json,NCBIGene:110357,,n01,include,,MOD2
 D.2_ssri-heart-disease.json,NCBIGene:3988,,n01,include,,LIPA
 D.2_ssri-heart-disease.json,NCBIGene:5627,,n01,include,,PROS1
 D.2_ssri-heart-disease.json,NCBIGene:7043,,n01,include,,TGFB3
-D.3_ssri-heart-disease-one-hop.json,N/A,,e00,include,,any clinical edge
 D.4_tryptophan-kyurenine.json,REACT:R-HSA-888614,,n02,include,,IDO
 D.4_tryptophan-kyurenine.json,KEGG:1.13.11.52,,n02,include,,IDO
 D.4_tryptophan-kyurenine.json,REACT:R-HSA-888614,,n03,include,,IDO
