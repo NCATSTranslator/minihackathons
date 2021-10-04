@@ -13,7 +13,8 @@
                         "biolink:decreases_uptake_of", 
                         "biolink:increases_degradation_of", 
                         "biolink:decreases_synthesis_of", 
-                        "biolink:decreases_activity_of"
+                        "biolink:decreases_activity_of", 
+                        "biolink:affects_response_to"
                     ]
                 }
             },

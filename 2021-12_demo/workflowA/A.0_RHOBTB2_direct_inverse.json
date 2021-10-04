@@ -3,17 +3,10 @@
         "query_graph": {
             "edges": {
                 "e01": {
-                    "object": "n0",
-                    "subject": "n1",
+                    "object": "n1",
+                    "subject": "n0",
                     "predicates": [
-                        "biolink:entity_negatively_regulates_entity",
-                        "biolink:decreases_abundance_of", 
-                        "biolink:decreases_expression_of", 
-                        "biolink:decreases_stability_of", 
-                        "biolink:decreases_uptake_of", 
-                        "biolink:increases_degradation_of", 
-                        "biolink:decreases_synthesis_of", 
-                        "biolink:decreases_activity_of"
+                        "biolink:affects_response_to"
                     ]
                 }
             },
