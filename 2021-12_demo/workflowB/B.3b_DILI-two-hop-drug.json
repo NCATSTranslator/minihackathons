@@ -10,7 +10,7 @@
                     "categories": ["biolink:DiseaseOrPhenotypicFeature"]
                 },
                 "n2": {
-                    "categories": ["biolink:ChemicalEntity"]
+                    "categories": ["biolink:Drug"]
                 }
             },
             "edges": {
