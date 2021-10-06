@@ -13,7 +13,7 @@
                     "categories": ["biolink:Gene"]
                 },
                 "n3": {
-                    "categories": ["biolink:ChemicalEntity"]
+                    "categories": ["biolink:Drug"]
                 }
             },
             "edges": {
@@ -28,12 +28,11 @@
                     "predicates": ["biolink:gene_associated_with_condition"]
                 },
                 "e03": {
-                    "subject": "n2",
-                    "object": "n3",
-                    "predicates": ["biolink:interacts_with"]
+                    "subject": "n3",
+                    "object": "n2",
+                    "predicates": ["biolink:affects"]
                 }
             }
         }
     }
 }
-
