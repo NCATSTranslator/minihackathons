@@ -37,7 +37,7 @@ _-- See imatinib_
 
 Imatinib (Gleevec), designed to treat cancer, targeting the bcr-abl protein. However, case studies emerged where patients with MS experienced improvements during treatment.
 
-Clicking on imatinib, we can see the evidence, provenance and context for this knowledge. This is from real world data for 10,000+ patients with multiple sclerosis and 10,000,000+ patients overall. This goes beyond co-occurance (drugs that people with MS commonly take) to find drugs that are likely to be more specific to patients who have multiple sclerosis.
+Clicking on imatinib, we can see the evidence, provenance and context for this knowledge. This is from real world data from logistic regression analysis for 10,000+ patients with multiple sclerosis and 10,000,000+ patients overall (positive_cohort_order_of_magnitude, negative_cohort_order_of_magnitude). This goes beyond co-occurance (drugs that people with MS commonly take) to find drugs that are likely to be more specific to patients who have multiple sclerosis.
 
 Let's look at how Translator can conduct more complex queries, that would be impossible in PubMED, Google, or any single knowledge base. Let's ask about underlying pathways of action for imatinib, and get a list of drugs that may operate via similar pathways.
 
