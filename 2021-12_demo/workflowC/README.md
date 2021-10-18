@@ -1,11 +1,15 @@
 ## Clinical real-world evidence: current drugs and potential new insights
-See this [google drive folder](https://drive.google.com/drive/folders/1gQC9RhE6jxPWRHm7fMf4MPW3ewq-LH0i).
+See [slides in google drive](https://drive.google.com/drive/folders/1gQC9RhE6jxPWRHm7fMf4MPW3ewq-LH0i).
 
-Our SME, Dr.  Baranzini, researches multiple sclerosis.
+**Immune-mediated inflammatory diseases**
 
-- **Query 1 (Explore):** Find **drugs** (SmallMolecule) related to **disease X**
-- **Query 2 (Explain & Expand):** For 1 or more SME-selected drugs from the Query 1 results, find **drugs** related to a **gene set** that is related to both (1) **disease X** and (2) the **SME-selected drug(s)**
-- **Query 3 (Find Research Evidence):** For 1 or more drug results from Query 2, find any associations between the drug and **disease X**
+Dr. Sergio Baranzini, multiple sclerosis.
+
+SME, Dr. Philip Mease, rheumatolgy
+
+- **Query 1 (Explore):** Find **drugs** (SmallMolecule) related to **disease X** from real-world evidence
+- **Query 2 (Explain & Expand):** For a SME-selected drug from Query 1 results, find **drugs** related to a **gene set** that is related to both (1) **disease X** and (2) the **SME-selected drug(s)**
+- **Query 3 (Find More Knowledge):** For a SME-selected drug from Query 2, find associations between the drug and **disease X**
 
 **Note:** Overlay edges can also provide research evidence (links to published papers) for final results
 
@@ -21,7 +25,13 @@ For a disease of interest we would first like to identify drugs that are in some
 
 As an example, say we are interested in drugs associated with multiple sclerosis. We could query Translator for this information as follows:
 
-**Query C.1** https://arax.ncats.io/?r=f9c78f7b-1f5e-455a-9f5f-e260fb283b49
+**Query C.1: Real world evidence on drugs for patient with multiple sclerosis**
+
+[JSON](https://github.com/NCATSTranslator/minihackathons/blob/main/2021-12_demo/workflowC/C.1a_SmallMolecule_real_world_evidence_MultSclerosis.json)
+
+[ARS result](https://arax.ncats.io/?r=f87a7926-50ab-4c5d-b021-9acdece57c47)
+
+We could look at drugs commonly taken by patients with multiple sclerosis (most frequent drug is Tylenol). We want to see drugs that are more related to multiple sclerosis (MS), or unexpectedly used more often in patients with MS. EHRs do not have structured information on why a drug is being given, but Translator uses explainable machine learning at scale to support this.
 
 Reviewing results from **Explanatory Agent**, you see several drugs commonly used in the treatment of multiple sclerosis:
    
@@ -35,11 +45,13 @@ A clinician reviewing these results will easily recognize these expected drugs. 
  
 _-- See imatinib_
 
-Imatinib (Gleevec), designed to treat cancer, targeting the bcr-abl protein. However, case studies emerged where patients with MS experienced improvements during treatment.
+Imatinib (Gleevec), designed to treat cancer, targeting the bcr-abl protein. Blocking PDGF-CC signaling ameliorates neuroinflammation by inhibiting disruption of the blood–brain barrier. However, case studies emerged where patients with MS experienced improvements during treatment. Clicking on this edge, we can see the evidence, provenance and context for this knowledge. This is from real world data for 10,000+ patients with multiple sclerosis and 10,000,000+ patients overall.
 
-Clicking on imatinib, we can see the evidence, provenance and context for this knowledge. This is from real world data for 10,000+ patients with multiple sclerosis and 10,000,000+ patients overall. This goes beyond co-occurance (drugs that people with MS commonly take) to find drugs that are likely to be more specific to patients who have multiple sclerosis.
+_-- See clevedipine_
 
-Let's look at how Translator can conduct more complex queries, that would be impossible in PubMED, Google, or any single knowledge base. Let's ask about underlying pathways of action for imatinib, and get a list of drugs that may operate via similar pathways.
+This seems unsual. It's a dihydropyridine calcium channel blocker. We'll investigate this one too.
+
+Now let's look at how Translator can conduct more complex queries, that would be impossible in PubMED, Google, or any single knowledge base. Let's ask about underlying pathways of action for imatinib, and get a list of drugs that may operate via similar pathways.
 
 **Query C.2 Working earlier, returning soon**
  https://arax.ncats.io/beta/?r=846
@@ -67,6 +79,11 @@ We can also include the original disease and this drug of interest in a third qu
 BTE: PMID:28381594
 ARAX: PMID:32293054
 
-**Query C.4**
+**Query C.4, under construction**
 From our SME, Dr.  Baranzini, we know that the there has been great advances in treating episodes of exacerbations, but not in stopping the underlying progressive demyelination on nerves. He is interested in drugs that interact with the myelination pathways (GO:0022010)
 https://arax.ncats.io/?r=87c5366a-eb0f-4582-8d30-134aa0a95a8c
+
+Note IGF (will connect to nimdipine).
+
+**Query C.5, under construction, rare disease**
+SME, Dr. Mease, Systemic Scleroris, Psoriasis, Psoriatic Arthritis
