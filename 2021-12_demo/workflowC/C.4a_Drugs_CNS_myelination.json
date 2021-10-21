@@ -1,0 +1,35 @@
+{
+    "message": {
+        "query_graph": {
+            "nodes": {
+                "n00": {
+                    "categories": [
+                        "biolink:BiologicalProcess"
+                    ],
+                    "ids": [
+                        "GO:0022010"
+                    ],
+                    "is_set": false
+                },
+                "n01": {
+                    "categories": [
+                        "biolink:SmallMolecule"
+                    ],
+                    "ids": [
+                        "CHEMBL.COMPOUND:CHEMBL1428"
+                    ],
+                    "is_set": false
+                }
+            },
+            "edges": {
+                "e00": {
+                    "subject": "n00",
+                    "object": "n01",
+                    "predicates": [
+                        "biolink:related_to"
+                    ]
+                }
+            }
+        }
+    }
+}
