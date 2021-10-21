@@ -54,7 +54,10 @@ Clicking on imatinib, we can see the evidence, provenance and context for this k
 Now let's look at how Translator can conduct more complex queries, that would be impossible in PubMED, Google, or any single knowledge base. Let's ask about underlying pathways of action for imatinib, and get a list of drugs that may operate via similar pathways.
 
 **Query C.2 Working earlier, returning soon**
- https://arax.ncats.io/beta/?r=846
+ 
+https://arax.ncats.io/beta/?r=846
+
+[JSON](https://github.com/NCATSTranslator/minihackathons/blob/main/2021-12_demo/workflowC/C.2a_Imatinib_MultSclerosis_GeneSet_and_SmallMolecule.json)
 
 Here is a set of genes (or pathways) that are associated with both multiple sclerosis and clevedipine. And here is a group of drugs that are associated with those genes/pathways.
 
@@ -68,19 +71,28 @@ Translator can also provide additional information, such as references to publis
 _-- CLick on a few PMIDs and highlight published research PMID #### (TBD)
 
 **Query C.2 Current query**
+[JSON](https://github.com/NCATSTranslator/minihackathons/blob/main/2021-12_demo/workflowC/C.2a_Imatinib_MultSclerosis_GeneSet_and_SmallMolecule.json)
+
 https://arax.ncats.io/?r=8257a139-bb29-47ba-a86b-611e44d8b1b0
 _-- Click on simvistatin
 
 This is a statin used to lower cholesterol. It is, in fact being investigated in clinical trial. https://clinicaltrials.gov/ct2/show/NCT03896217.
 
 **Query C.3**
-We can also include the original disease and this drug of interest in a third query to see what additional knowledge Translator can provide.https://arax.ncats.io/?r=8a313286-e04d-44f2-9a92-c63abd7287b7
+We can also include the original disease and this drug of interest in a third query to see what additional knowledge Translator can provide.
+
+[JSON](https://github.com/NCATSTranslator/minihackathons/blob/main/2021-12_demo/workflowC/C.3a_MultSclerosis_related_to_Nimodipine.json)
+
+https://arax.ncats.io/?r=8a313286-e04d-44f2-9a92-c63abd7287b7
 
 BTE: PMID:28381594
 ARAX: PMID:32293054
 
 **Query C.4, under construction**
 From our SME, Dr.  Baranzini, we know that the there has been great advances in treating episodes of exacerbations, but not in stopping the underlying progressive demyelination on nerves. He is interested in drugs that interact with the myelination pathways (GO:0022010)
+
+[JSON](https://github.com/NCATSTranslator/minihackathons/blob/main/2021-12_demo/workflowC/C.4a_Drugs_CNS_myelination.json)
+
 https://arax.ncats.io/?r=87c5366a-eb0f-4582-8d30-134aa0a95a8c
 
 Note IGF (will connect to nimdipine).
