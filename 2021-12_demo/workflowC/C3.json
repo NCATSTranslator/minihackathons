@@ -1,0 +1,132 @@
+{
+  "edges": {
+    "e0": {
+      "subject": "n0",
+      "object": "n1",
+      "predicates": [
+        "biolink:related_to"
+      ]
+    },
+    "e1": {
+      "subject": "n1",
+      "object": "n2",
+      "predicates": [
+        "biolink:genetically_interacts_with"
+      ]
+    },
+    "e2": {
+      "subject": "n3",
+      "object": "n2",
+      "predicates": [
+        "biolink:affects",
+        "biolink:correlated_with"
+      ]
+    },
+    "e3": {
+      "subject": "n4",
+      "object": "n3",
+      "predicates": [
+        "biolink:related_to"
+      ]
+    },
+    "e4": {
+      "subject": "n5",
+      "object": "n2",
+      "predicates": [
+        "biolink:related_to"
+      ]
+    }
+  },
+  "nodes": {
+    "n0": {
+      "ids": [
+        "GO:0022010",
+        "UMLS:C1818586"
+      ],
+      "is_set": false,
+      "categories": [
+        "biolink:BiologicalProcess"
+      ]
+    },
+    "n1": {
+      "is_set": true,
+      "categories": [
+        "biolink:Gene",
+        "biolink:Protein"
+      ]
+    },
+    "n2": {
+      "is_set": true,
+      "categories": [
+        "biolink:Gene",
+        "biolink:Protein"
+      ]
+    },
+    "n3": {
+      "is_set": false,
+      "categories": [
+        "biolink:SmallMolecule"
+      ]
+    },
+    "n4": {
+      "ids": [
+        "MONDO:0020800",
+        "UMLS:C4076113",
+        "UMLS:C0586256",
+        "MONDO:0006692",
+        "MONDO:0005301",
+        "UMLS:C4511867",
+        "UMLS:C2921627",
+        "UMLS:C4511844",
+        "MONDO:0009835",
+        "UMLS:C1720104",
+        "UMLS:C4075966",
+        "MONDO:0020800",
+        "UMLS:C4510698",
+        "UMLS:C4511050",
+        "MONDO:0010085",
+        "UMLS:C4546140",
+        "MONDO:0011380",
+        "UMLS:C4511864",
+        "UMLS:C4511865",
+        "UMLS:C4324721",
+        "MONDO:0016430",
+        "UMLS:C0393820"
+      ],
+      "is_set": false,
+      "categories": [
+        "biolink:Disease"
+      ]
+    },
+    "n5": {
+      "ids": [
+        "MONDO:0020800",
+        "UMLS:C4076113",
+        "UMLS:C0586256",
+        "MONDO:0006692",
+        "MONDO:0005301",
+        "UMLS:C4511867",
+        "UMLS:C2921627",
+        "UMLS:C4511844",
+        "MONDO:0009835",
+        "UMLS:C1720104",
+        "UMLS:C4075966",
+        "MONDO:0020800",
+        "UMLS:C4510698",
+        "UMLS:C4511050",
+        "MONDO:0010085",
+        "UMLS:C4546140",
+        "MONDO:0011380",
+        "UMLS:C4511864",
+        "UMLS:C4511865",
+        "UMLS:C4324721",
+        "MONDO:0016430",
+        "UMLS:C0393820"
+      ],
+      "is_set": false,
+      "categories": [
+        "biolink:Disease"
+      ]
+    }
+  }
+}
