@@ -15,7 +15,7 @@ _Immune-mediated inflammatory diseases (IMIDs)_
 
 ### Query C1: MDs looking at drugs used for patients with IMIDs
 
-ARS, [ARAX](https://arax.ncats.io/?r=32493), [JSON](https://github.com/NCATSTranslator/minihackathons/blob/main/2021-12_demo/workflowC/C1.json)
+[ARS](https://arax.ncats.io/index.html?r=4f51524f-af83-43d5-815a-a7706559e702), [ARAX](https://arax.ncats.io/?r=32493), [JSON](https://github.com/NCATSTranslator/minihackathons/blob/main/2021-12_demo/workflowC/C1.json)
 
 Literature shows a vast number of medications that may treat IMIDs. However, the team was interested in seeing real world use of drugs for patients with IMIDs: approved and off-label.
 
