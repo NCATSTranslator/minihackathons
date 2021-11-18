@@ -6,32 +6,34 @@ _Immune-mediated inflammatory diseases (IMIDs)_
 
 ## Queries
 
-1. **Drugs** known to treat or prevent **diseases XYZ**
-2. Clinical real-world insights on **drugs** taken by patients with **diseases XYZ**
-3. Investigate expert-recommended **candidate drugs for repurposing** for **disease Q** to look for connections with **gene pathway P**
-4. Search more broadly for **drugs** used in the real world with patients with **diseases QRS** that are **connected to gene pathway P**
----
+1. **Drugs** used for patients with **diseases XYZ** in the real world.
+2. Investigate expert-recommended **candidate drugs for repurposing** for **disease Q** and look for connections with **gene pathway P**
+3. Search broadly for **drugs** used in the real world for patients with **diseases QRS** that are **connected to gene pathway P**
+
+## SME User Senario 1
+
 **Philip Mease, MD** is a rheumatologist who is working on immune-mediated inflammatory diseases (IMIDs) with an interdisciplinary team including gastroenterologists and data scientists. Team members want to learn more about the many-to-many maps between thousands of IMIDs and immunomodulatory drugs. **Systemic sclerosis** (sometimes called **scleroderma** ) is a spectrum of rare diseases related to excess collagen, which can lead to fibrosis of the skin, internal organs, or both.
 
-### Query C1: MDs looking at drugs used for patients with IMIDs
+### Query C1: Team looking at drugs used for patients with IMIDs
 
-[ARS](https://arax.ncats.io/index.html?r=4f51524f-af83-43d5-815a-a7706559e702), [ARAX](https://arax.ncats.io/?r=32493), [JSON](https://github.com/NCATSTranslator/minihackathons/blob/main/2021-12_demo/workflowC/C1.json)
+[ARS](https://arax.ncats.io/index.html?r=4f51524f-af83-43d5-815a-a7706559e702), [ARAX](https://arax.ncats.io/index.html?r=32546), [JSON](https://github.com/NCATSTranslator/minihackathons/blob/main/2021-12_demo/workflowC/C1.json)
 
-Literature shows a vast number of medications that may treat IMIDs. However, the team was interested in seeing real world use of drugs for patients with IMIDs: approved and off-label.
+Literature shows a vast number of medications that may treat IMIDs. However, the team was interested in seeing real world use of drugs for patients with IMIDs: approved and off-label. Structured EHR data does not track why a drug is prescribed treating because it is usually obvious to other clinicians, and any unusual treatments are only explained in free text notes. If you only look at drugs that co-occur with scleroderma, you&#39;ll see a vast list, starting with things like acetaminophen (Tylenol) because it&#39;s so common for patients in general. Translator includes knowledge derived from EHRs that show drugs that are **likely to be related** to a specific disease. These might be a disease modifying drugs, or medications that treats symptoms or secondary conditions related to the disease.
 
-Structured EHR data does not track why a drug is prescribed treating because it is usually obvious to other clinicians, and any unusual treatments are only explained in free text notes. If you only look at drugs that co-occur with scleroderma, you&#39;ll see a vast list, starting with things like acetaminophen (Tylenol) because it&#39;s so common for patients in general.
+The team is familiar with many drugs and can quickly scan through them. **Note**: Cyclophosphamide, methotrexate, and dexamethasone are common immunomodulatory drugs used to treat many IMIDs.
 
-Translator knowledge providers have developed techniques, including relative frequency and machine learning to derive knowledge about what drugs people are prescribed or administered that are **likely to be related** to a specific disease. These might be a disease modifying drugs, or medications that treats symptoms or secondary conditions related to the disease.
+**Tofacitinib** is a JAK inhibitor, which they know is used for some more common IMIDs.
+Click on the **psoriasis** COHD edge. This shows knowledge derived from EHR data, including Chi squared and observed to expected ratio.
 
-**Mycophenolate mofetil**
-- **CREST syndrome**. Notice translator automatically mapped to subtypes of scleroderma, including this rare disease.
-- **Systemic sclerosis:** Columbia Open Health Data (COHD), direct statistics: Chi squared and observed to expected ratio. **Multiomics** : Here&#39;s data from another knowledge provider. Note the **size of the population,** reported in **log** to avoid differential privacy attacks. Order of magnitude: Log 7 **10,000,000** patients, log 3, **1,000** with systemic sclerosis.
----
+They are interested see it's also being used in patients with **systemic sclerosis**. Click on **Biothings Multiomics**. This shows knowledge derived using machine learning models. This drug suggests a slightly increased likelihood that the patient also has systemic sclerosis. This shows the **size of the population,** reported in **log** to avoid differential privacy attacks: order of magnitude is log 7 **10,000,000** patients, log 3, **1,000** with systemic sclerosis.
+
+## SME User Senario 2
+
 **Dr. Sergio Baranzini, PhD** is a biomedical expert in Multiple Sclerosis. There have been great advances in treating multiple sclerosis exacerbations, but not in stopping the underlying progressive demyelination on nerves. Dr. Baranzini is interested in drugs that interact with the central nervous systems (CNS) myelination gene pathways. A paper that came out this year included a list of eight candidates for drug repurposing for progressive multiple sclerosis. He would like to see whether/how these drugs connect with CNS myelination pathways.
 
 ### Query C2: Investigating whether drug repurposing candidates connect to CNS myelination
 
-[ARS](https://arax.ncats.io/?r=a49d8280-724d-42cf-8b6e-14227f6fefd7), [alt ARS](https://arax.ncats.io/?r=f58348a7-4491-4bbc-bb44-50e8aae16590), [ARAX](https://arax.ncats.io/?r=31733), [JSON](https://github.com/NCATSTranslator/minihackathons/blob/main/2021-12_demo/workflowC/C2.json)
+[ARS](https://arax.ncats.io/index.html?r=aa62c8b3-d934-4b2f-ac11-2ce0c2c719a1), [ARAX](https://arax.ncats.io/index.html?r=31733), [JSON](https://github.com/NCATSTranslator/minihackathons/blob/main/2021-12_demo/workflowC/C2.json)
 
 Aragorn or ARAX. Choose **clemastine**. Click on edge to STAT3. This is now in clinical trials for remyelination.
 
@@ -39,8 +41,8 @@ Choose **nimodipine**. Click on the edges to multiple sclerosis. SME thinks the 
 
 ### Query C3: Investigation of potential candidates connected to CNS myelination
 
-[ARS](https://arax.ncats.io/?r=c97d96f8-73fc-42cb-9d5f-5ec7e4cbc7f8), [alt ARS](https://arax.ncats.io/?r=cbbab5fd-8776-4563-99a5-2e7e95390b9c), [ARAX](https://arax.ncats.io/?r=32237), [JSON](https://github.com/NCATSTranslator/minihackathons/blob/main/2021-12_demo/workflowC/C3.json)
+[ARS](https://arax.ncats.io/index.html?r=34e05195-c7c3-44fb-b210-12ec3b91e8e9), [ARAX](https://arax.ncats.io/index.html?r=32551), [JSON](https://github.com/NCATSTranslator/minihackathons/blob/main/2021-12_demo/workflowC/C3.json)
 
-Translator independently finds both existing drugs and several that experts suggested: Metformin, clemastine, thioctic acid, niacin, tamoxifen. It does not find nimodipine in this query, but it found an alternate calcium channel blocker ( **nifedipine** ), and new evidence just came out in mouse models: [PMID 33709265](https://pubmed.ncbi.nlm.nih.gov/33709265).
+Translator independently finds both existing drugs and several that experts suggested: metformin, clemastine, thioctic acid, niacin, tamoxifen. It does not find nimodipine in this query, but it found an alternate calcium channel blocker ( **nifedipine** ), and new evidence just came out in mouse models: [PMID 33709265](https://pubmed.ncbi.nlm.nih.gov/33709265).
 
-The SME is intrigued by **quercetin** (plant-based), and **dasatinib** (a tyrosine kinase inhibitor) and will
+The SME is intrigued by **quercetin** (which is plant-based), and **dasatinib** (a tyrosine kinase inhibitor), and will investigating further.
