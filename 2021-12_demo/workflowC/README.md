@@ -10,7 +10,7 @@ _Immune-mediated inflammatory diseases (IMIDs)_
 2. Investigate expert-recommended **candidate drugs for repurposing** for **disease Q** and look for connections with **gene pathway P**
 3. Search broadly for **drugs** used in the real world for patients with **diseases QRS** that are **connected to gene pathway P**
 
-## SME User Senario 1
+## SME User Scenario 1
 
 **Philip Mease, MD** is a rheumatologist who is working on immune-mediated inflammatory diseases (IMIDs) with an interdisciplinary team including gastroenterologists and data scientists. Team members want to learn more about the many-to-many maps between thousands of IMIDs and immunomodulatory drugs. **Systemic sclerosis** (sometimes called **scleroderma** ) is a spectrum of rare diseases related to excess collagen, which can lead to fibrosis of the skin, internal organs, or both.
 
@@ -25,9 +25,9 @@ The team is familiar with many drugs and can quickly scan through them. **Note**
 **Tofacitinib** is a JAK inhibitor, which they know is used for some more common IMIDs.
 Click on the **psoriasis** COHD edge. This shows knowledge derived from EHR data, including Chi squared and observed to expected ratio.
 
-They are interested see it's also being used in patients with **systemic sclerosis**. Click on **Biothings Multiomics**. This shows knowledge derived using machine learning models. This drug suggests a slightly increased likelihood that the patient also has systemic sclerosis. This shows the **size of the population,** reported in **log** to avoid differential privacy attacks: order of magnitude is log 7 **10,000,000** patients, log 3, **1,000** with systemic sclerosis.
+They are interested to see it's also being used in patients with **systemic sclerosis**. Click on **Biothings Multiomics**. This shows knowledge derived using machine learning models. This drug suggests a slightly increased likelihood that the patient also has systemic sclerosis. This shows the **size of the population,** reported in **log** to avoid differential privacy attacks: order of magnitude is log 7 **10,000,000** patients, log 3, **1,000** with systemic sclerosis.
 
-## SME User Senario 2
+## SME User Scenario 2
 
 **Dr. Sergio Baranzini, PhD** is a biomedical expert in Multiple Sclerosis. There have been great advances in treating multiple sclerosis exacerbations, but not in stopping the underlying progressive demyelination on nerves. Dr. Baranzini is interested in drugs that interact with the central nervous systems (CNS) myelination gene pathways. A paper that came out this year included a list of eight candidates for drug repurposing for progressive multiple sclerosis. He would like to see whether/how these drugs connect with CNS myelination pathways.
 
@@ -45,4 +45,4 @@ Choose **nimodipine**. Click on the edges to multiple sclerosis. SME thinks the 
 
 Translator independently finds both existing drugs and several that experts suggested: metformin, clemastine, thioctic acid, niacin, tamoxifen. It does not find nimodipine in this query, but it found an alternate calcium channel blocker ( **nifedipine** ), and new evidence just came out in mouse models: [PMID 33709265](https://pubmed.ncbi.nlm.nih.gov/33709265).
 
-The SME is intrigued by **quercetin** (which is plant-based), and **dasatinib** (a tyrosine kinase inhibitor), and will investigating further.
+The SME is intrigued by **quercetin** (which is plant-based), and **dasatinib** (a tyrosine kinase inhibitor), and will be investigating further.
