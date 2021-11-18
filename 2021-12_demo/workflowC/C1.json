@@ -4,19 +4,26 @@
             "nodes": {
                 "n00": {
                     "categories": [
-                        "biolink:BiologicalProcess"
+                        "biolink:Disease"
                     ],
-                    "ids": [
-                        "GO:0022010"
-                    ],
-                    "is_set": false
+      "ids": [
+        "MONDO:0005301",
+        "MONDO:0005083",
+        "MONDO:0011849",
+        "MONDO:0005100",
+        "MONDO:0005101",
+        "MONDO:0007915",
+        "MONDO:0005011",
+        "MONDO:0005306",
+        "MONDO:0010030",
+        "MONDO:0019340",
+        "MONDO:0008538"
+      ],
+                    "is_set": true
                 },
                 "n01": {
                     "categories": [
                         "biolink:SmallMolecule"
-                    ],
-                    "ids": [
-                        "CHEMBL.COMPOUND:CHEMBL1428"
                     ],
                     "is_set": false
                 }
@@ -26,7 +33,7 @@
                     "subject": "n00",
                     "object": "n01",
                     "predicates": [
-                        "biolink:related_to"
+                        "biolink:has_real_world_evidence_of_association_with"
                     ]
                 }
             }
