@@ -41,7 +41,7 @@ Choose **nimodipine**. Click on the edges to multiple sclerosis. SME thinks the 
 
 ### Query C3: Investigation of potential candidates connected to CNS myelination
 
-[ARS](https://arax.ncats.io/index.html?r=34e05195-c7c3-44fb-b210-12ec3b91e8e9), [ARAX](https://arax.ncats.io/index.html?r=32551), [JSON](https://github.com/NCATSTranslator/minihackathons/blob/main/2021-12_demo/workflowC/C3.json)
+[ARS](https://arax.ncats.io/?r=a39132c2-1f39-4c73-a56e-068685b22093), [ARAX](https://arax.ncats.io/?r=31722), [JSON](https://github.com/NCATSTranslator/minihackathons/blob/main/2021-12_demo/workflowC/C3.json)
 
 Translator independently finds both existing drugs and several that experts suggested: metformin, clemastine, thioctic acid, niacin, tamoxifen. It does not find nimodipine in this query, but it found an alternate calcium channel blocker ( **nifedipine** ), and new evidence just came out in mouse models: [PMID 33709265](https://pubmed.ncbi.nlm.nih.gov/33709265).
 
