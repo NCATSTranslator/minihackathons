@@ -16,11 +16,11 @@ _Immune-mediated inflammatory diseases (IMIDs)_
 
 ### Query C1: Team looking at drugs used for patients with IMIDs
 
-[ARS](https://arax.ncats.io/index.html?r=4f51524f-af83-43d5-815a-a7706559e702), [ARAX](https://arax.ncats.io/index.html?r=32546), [JSON](https://github.com/NCATSTranslator/minihackathons/blob/main/2021-12_demo/workflowC/C1.json)
+[ARS](https://arax.ncats.io/?r=2f8ca4bf-42f9-49de-a49c-ae53ecef6cd8), [ARAX](https://arax.ncats.io/index.html?r=32546), [JSON](https://github.com/NCATSTranslator/minihackathons/blob/main/2021-12_demo/workflowC/C1.json)
 
 Literature shows a vast number of medications that have been considered to treat IMIDs. However, the team was interested in seeing real world use of drugs for IMIDs: approved and off-label. Structured EHR data does not track _why_ a drug is prescribed (it's usually obvious to other clinicians) and unusual treatments are explained in free text notes. If you looked only co-occurance rates of drugs in patients with scleroderma, you&#39;ll see a vast list, starting with things like acetaminophen (Tylenol) because it&#39;s commonly used by patients in general. Translator has EHR-derived knowledge about which drugs that are **likely to be related** to a specific disease. These might be disease modifying drugs, or medications that treats symptoms or secondary conditions related to the disease.
 
-The team is familiar with thousands of drugs and can quickly scan through them. **Note**: methotrexate, dexamethasone and sulfasalazine are common immunomodulatory drugs used to treat many IMIDs.
+Choose Aragorn, ARAX: The team is familiar with thousands of drugs and can quickly scan through them. **Note**: methotrexate, dexamethasone and sulfasalazine are common immunomodulatory drugs used to treat many IMIDs.
 
 **Tofacitinib** is a JAK inhibitor, which they know used for some of their patients IMIDs.
 Click on the **psoriasis** COHD edge. This shows knowledge derived from EHR data, including Chi squared and observed to expected ratio.
