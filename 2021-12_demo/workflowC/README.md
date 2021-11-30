@@ -43,10 +43,12 @@ Optional: BTE list, see by genes, click on STAT3.
 
 ### Query C3: Investigation of potential candidates connected to CNS myelination
 
-[latest ARS](https://arax.ncats.io/?r=fedb52bc-9cb4-4ee7-8202-19ec78d5cdf0), [ARAX](https://arax.ncats.io/?r=32966), [JSON](https://github.com/NCATSTranslator/minihackathons/blob/main/2021-12_demo/workflowC/C3.json)
+[latest ARS](https://arax.ncats.io/?r=f070eda1-5095-4587-b021-3a5831d6b5ea), [ARAX](https://arax.ncats.io/?r=32966), [JSON](https://github.com/NCATSTranslator/minihackathons/blob/main/2021-12_demo/workflowC/C3.json)
 
 Translator independently finds both existing drugs and several that experts suggested, including: metformin and tamoxifen.
 
-_Note_: sometimes it finds others: clemastine, lipoic acid, niacin (nicotinic acid) and calcium channel blockers similar to nimodipine. New evidence for nimodipine came out in mouse models: [PMID 33709265](https://pubmed.ncbi.nlm.nih.gov/33709265).
+It also found a calcium channel blockers similar to nimodipine. Note (surfaced earlier by Translator,and possiblu used in ranking, but not shown directly in demo): there is new evidence for nimodipine in mouse models: [PMID 33709265](https://pubmed.ncbi.nlm.nih.gov/33709265).
+
+Optional: Click on edge between MS and MAG, showing BTE, including TextMiner through Service Provider. Scroll down to see PMIDs.
 
 The SME is intrigued by **quercetin** (which is plant-based), and **dasatinib** (a tyrosine kinase inhibitor), and will be investigating further.
