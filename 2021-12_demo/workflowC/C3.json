@@ -38,7 +38,7 @@
       "nodes": {
         "n0": {
           "categories": [
-            "biolink:PhysiologicalProcess"
+            "biolink:BiologicalProcess"
           ],
           "constraints": [],
           "ids": [
