@@ -1,242 +1,54 @@
-## Clinical real-world evidence: current drugs and potential new insights
-See this [google drive folder](https://drive.google.com/drive/folders/1gQC9RhE6jxPWRHm7fMf4MPW3ewq-LH0i).
+# Clinical real-world evidence: current drugs and potential new insights
 
-- **Query 1 (Explore):** Find **drugs** (SmallMolecule) related to **disease X**
-- **Query 2 (Explain & Expand):** For 1 or more SME-selected drugs from the Query 1 results, find **drugs** related to a **gene set** that is related to both (1) **disease X** and (2) the **SME-selected drug(s)**
-- **Query 3 (Find Research Evidence):** For 1 or more drug results from Query 2, find any associations between the drug and **disease X**
+_Immune-mediated inflammatory diseases (IMIDs)_
 
-**Note:** Overlay edges can also provide research evidence (links to published papers) for final results
+[Slides in google drive](https://drive.google.com/drive/folders/1gQC9RhE6jxPWRHm7fMf4MPW3ewq-LH0i)
 
-![image](https://user-images.githubusercontent.com/18222763/130814236-7721958b-6896-4b4c-92a9-517169b0202c.png)
+## Queries
 
-## December Demo Narrative
+1. **Drugs** used for patients with **diseases XYZ** in the real world.
+2. Investigate expert-recommended **candidate drugs for repurposing** for **disease Q** and look for connections with **gene pathway P**
+3. Search broadly for **drugs** used in the real world for patients with **diseases QRS** that are **connected to gene pathway P**
 
-The following provides a high-level narrative for walking through workflow C in the December demo. Note that this should be seen as a template narrative in which the specific disease example (in this case, multiple sclerosis) could be replaced by another disease of interest. By the time of the December demo, we should have two or more solid disease examples in which the narrative outlined below highlights some compelling results.
+## SME User Scenario 1
 
-### Example narrative using multiple sclerosis as the disease of interest
+**Philip Mease, MD** is a rheumatologist who is working on immune-mediated inflammatory diseases (IMIDs) with an interdisciplinary team including gastroenterologists and data scientists. Team members want to learn more about the many-to-many maps between thousands of IMIDs and immunomodulatory drugs. **Systemic sclerosis** (sometimes called **scleroderma** ) is a spectrum of rare diseases related to excess collagen, which can lead to fibrosis of the skin, internal organs, or both.
 
-For a disease of interest we would first like to identify drugs that are in some way associated with the disease, based on data from a clinical care setting. These could be drugs (1) used to directly treat the disease, (2) used to treat symptoms or comorbidities often associated with the disease, or possibly (3) drugs used for treating another condition, but which have the side effect of exacerbating the disease of interest.
+### Query C1: Team looking at drugs used for patients with IMIDs
 
-As an example, say we are interested in drugs associated with multiple sclerosis. We could query Translator for this information as follows:
+[ARS](https://arax.ncats.io/?r=906cb094-24fa-4f83-b590-74d002557aa3), [ARAX](https://arax.ncats.io/?r=32962), [JSON](https://github.com/NCATSTranslator/minihackathons/blob/main/2021-12_demo/workflowC/C1.json)
 
-[_Run query C.1 (or view results previously obtained) using multiple scelerosis as the disease of interest_]
+Literature shows a vast number of medications that have been considered to treat IMIDs. However, the team was interested in seeing real world use of drugs for IMIDs: approved and off-label. Structured EHR data does not track _why_ a drug is prescribed (it's usually obvious to other clinicians) and unusual treatments are explained in free text notes. If you looked only co-occurance rates of drugs in patients with scleroderma, you&#39;ll see a vast list, starting with things like acetaminophen (Tylenol) because it&#39;s commonly used by patients in general. Translator has EHR-derived knowledge about which drugs that are **likely to be related** to a specific disease. These might be disease modifying drugs, or medications that treats symptoms or secondary conditions related to the disease.
 
-Reviewing results, we see several drugs commonly used in the treatment of multiple sclerosis:
+Choose Aragorn, ARAX: The team is familiar with thousands of drugs and can quickly scan through them. **Note**: methotrexate, dexamethasone and sulfasalazine are common immunomodulatory drugs used to treat many IMIDs.
 
-[_Point out examples of drugs used to treat the disease e.g. ocrelizumab, natalizumab_]
+**Tofacitinib** is a JAK inhibitor, which they know used for some of their patients IMIDs.
+Click on the **psoriasis** COHD edge. This shows knowledge derived from EHR data, including Chi squared and observed to expected ratio.
 
-We also see drugs that are used to treat symptoms or secondary conditions commonly seen in multiple sclerosis patients:
+They are interested to see it's also being used in patients with **systemic sclerosis**. Click on **Biothings Multiomics**. This shows knowledge derived using machine learning models. This drug suggests a slightly increased likelihood that the patient also has systemic sclerosis. This shows the **size of the population,** reported in **log** to avoid differential privacy attacks: order of magnitude is log 7 **10,000,000** patients, log 3, **1,000** with systemic sclerosis.
 
-[_Point out examples of drugs used to treat symptoms, such as pain or muscle spasticity e.g. baclofen, tizanidine, gabapentin, oxybutynin_]
+## SME User Scenario 2
 
-A clinician reviewing these results will easily recognize these expected drugs. Other drugs may be more surprising. In some cases, these may be drugs that are used off-label for the disease or have been in clinical trials for repurposing.
+**Dr. Sergio Baranzini, PhD** is a biomedical expert in Multiple Sclerosis. There have been great advances in treating multiple sclerosis exacerbations, but not in stopping the underlying progressive demyelination on nerves. Dr. Baranzini is interested in drugs that interact with the central nervous systems (CNS) myelination gene pathways. A paper that came out this year included a list of eight candidates for drug repurposing for progressive multiple sclerosis. He would like to see whether/how these drugs connect with CNS myelination pathways.
 
-[_Point out examples e.g. imatinib_]
+### Query C2: Investigating whether drug repurposing candidates connect to CNS myelination
 
-What if Translator could (1) provide information about underlying pathways of action for such drugs (e.g. via specific gene products) and (2) identify an expanded list of drugs that may operate via similar pathways. We can run such a query.
+[ARS with BTE ](https://arax.ncats.io/?r=5a1e4475-e01c-4f5d-b86a-efda20dddbe9), [older ARS with Aragon ](https://arax.ncats.io/index.html?r=aa62c8b3-d934-4b2f-ac11-2ce0c2c719a1), [ARAX](https://arax.ncats.io/index.html?r=32963), [JSON](https://github.com/NCATSTranslator/minihackathons/blob/main/2021-12_demo/workflowC/C2.json)
 
-[_Run query C.2 (or view results previously obtained) using natalizumab, imatinib, or another interesting drug_]
+Aragorn or ARAX. Choose **clemastine**. Click on edge to STAT3. This is now in clinical trials for remyelination.
 
-Here is a set of genes (or pathways) that are associated with both multiple sclerosis and the drug(s) that we selected from the first query. And here is a group of drugs that are associated with those genes/pathways. Inspecting the drugs, we see some interesting results. Let's look at <_interesting drug such as atorvastatin_>.
+Choose **nimodipine**. Click on the edges to multiple sclerosis. SME thinks the mechanism of action makes sense. See nimodipine note on **PMID:28381594**. Nimodipine fosters remyelination in a mouse model.
 
-[_Highlight some of the drugs in the final group that are interesting (might also highlight some of the genes/pathways)_]
+Optional: BTE list, see by genes, click on STAT3.
 
-Translator also has an "overlay" feature that can provide additional "provenance" or source information, such as references to published studies reporting evidence of associations between these drugs and the disease of interest. For example, here's a "research evidence" edge connecting the drug <_interesting drug from final results_> to multiple sclerosis. If we click on that edge, we get a list of PubMed IDs for papers that we can look at to understand the basis of these associations.
+### Query C3: Investigation of potential candidates connected to CNS myelination
 
-[_Click on a few PMIDs and highlight some of the published research results_]
+[latest ARS](https://arax.ncats.io/?r=f070eda1-5095-4587-b021-3a5831d6b5ea), [ARAX](https://arax.ncats.io/?r=32966), [JSON](https://github.com/NCATSTranslator/minihackathons/blob/main/2021-12_demo/workflowC/C3.json)
 
-We can also include the original disease and this drug of interest in a third query to see what additional associations and research evidence Translator can provide.
+Translator independently finds both existing drugs and several that experts suggested, including: metformin and tamoxifen.
 
-[_Run query C.3 (or view results previously obtained) using multiple sclerosis and atorvastatin_]
+It also found a calcium channel blockers similar to nimodipine. Note (surfaced earlier by Translator,and possiblu used in ranking, but not shown directly in demo): there is new evidence for nimodipine in mouse models: [PMID 33709265](https://pubmed.ncbi.nlm.nih.gov/33709265).
 
-Emphasize that we could follow a similar investigative/exploratory workflow with other diseases besides multiple sclerosis.
+Optional: Click on edge between MS and MAG, showing BTE, including TextMiner through Service Provider. Scroll down to see PMIDs.
 
-[_Possibly briefly highlight interesting results already generated for other diseases: Systemic Scleroderma, Ehlers-Danlos, Meniere_]
-
-## Example Using Multiple Sclerosis as Disease X
-
-### Query 1: SmallMolecule has_real_world_evidence_of_association_with MONDO:0005301
-
-Results: https://arax.ncats.io/?r=27565
-
-```
-{
-    "message": {
-        "query_graph": {
-            "nodes": {
-                "n00": {
-                    "categories": [
-                        "biolink:Disease"
-                    ],
-                    "ids": [
-                        "MONDO:0005301"
-                    ],
-                    "is_set": false
-                },
-                "n01": {
-                    "categories": [
-                        "biolink:SmallMolecule"
-                    ],
-                    "is_set": false
-                }
-            },
-            "edges": {
-                "e00": {
-                    "subject": "n00",
-                    "object": "n01",
-                    "predicates": [
-                        "biolink:has_real_world_evidence_of_association_with"
-                    ]
-                }
-            }
-        }
-    }
-}
-```
-
-### Query 2: SmallMolecule interacts_with MS/natalizumab Genes
-
-Results: https://arax.ncats.io/?r=27108
-
-```
-{
-    "workflow": [
-        {
-            "id": "fill"
-        },
-        {
-            "id": "bind"
-        },
-        {
-            "id": "overlay_compute_ngd",
-            "parameters": {
-                "virtual_relation_label": "N1",
-                "qnode_keys": [
-                    "n3",
-                    "n1"
-                ]
-            }
-        },
-        {
-            "id": "overlay_compute_ngd",
-            "parameters": {
-                "virtual_relation_label": "N2",
-                "qnode_keys": [
-                    "n2",
-                    "n3"
-                ]
-            }
-        },
-        {
-            "id": "complete_results"
-        },
-        {
-            "id": "filter_results_top_n",
-            "parameters": {
-                "max_results": 500
-            }
-        }
-    ],
-    "message": {
-        "query_graph": {
-            "nodes": {
-                "n0": {
-                    "categories": [
-                        "biolink:Gene"
-                    ],
-                    "is_set": true
-                },
-                "n1": {
-                    "ids": [
-                        "CHEMBL.COMPOUND:CHEMBL1201607"
-                    ],
-                    "categories": [
-                        "biolink:SmallMolecule"
-                    ],
-                    "is_set": false
-                },
-                "n2": {
-                    "ids": [
-                        "MONDO:0005301"
-                    ],
-                    "categories": [
-                        "biolink:Disease"
-                    ],
-                    "is_set": false
-                },
-                "n3": {
-                    "categories": [
-                        "biolink:SmallMolecule"
-                    ],
-                    "is_set": false
-                }
-            },
-            "edges": {
-                "e01": {
-                    "predicates": [
-                        "biolink:interacts_with"
-                    ],
-                    "subject": "n0",
-                    "object": "n1"
-                },
-                "e02": {
-                    "predicates": [
-                        "biolink:genetic_association"
-                    ],
-                    "subject": "n0",
-                    "object": "n2"
-                },
-                "e03": {
-                    "predicates": [
-                        "biolink:interacts_with"
-                    ],
-                    "subject": "n0",
-                    "object": "n3"
-                }
-            }
-        }
-    }
-}
-```
-
-### Query 3: Multiple sclerosis related_to atorvastatin
-
-Results: https://arax.ncats.io/?r=b7a43315-377e-40c9-9f6b-c92a8295f7d2
-
-```
-{
-    "message": {
-        "query_graph": {
-            "nodes": {
-                "n00": {
-                    "categories": [
-                        "biolink:Disease"
-                    ],
-                    "ids": [
-                        "MONDO:0005301"
-                    ],
-                    "is_set": false
-                },
-                "n01": {
-                    "categories": [
-                        "biolink:SmallMolecule"
-                    ],
-                    "ids": [
-                        "CHEMBL.COMPOUND:CHEMBL1487"
-                    ],
-                    "is_set": false
-                }
-            },
-            "edges": {
-                "e00": {
-                    "subject": "n00",
-                    "object": "n01",
-                    "predicates": [
-                        "biolink:related_to"
-                    ]
-                }
-            }
-        }
-    }
-}
-```
+The SME is intrigued by **quercetin** (which is plant-based), and **dasatinib** (a tyrosine kinase inhibitor), and will be investigating further.
