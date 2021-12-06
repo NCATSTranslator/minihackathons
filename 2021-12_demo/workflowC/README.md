@@ -16,7 +16,7 @@ _Immune-mediated inflammatory diseases (IMIDs)_
 
 ### Query C1: Team looking at drugs used for patients with IMIDs
 
-[ARS](https://arax.ncats.io/?r=906cb094-24fa-4f83-b590-74d002557aa3), [ARAX](https://arax.ncats.io/?r=32962), [JSON](https://github.com/NCATSTranslator/minihackathons/blob/main/2021-12_demo/workflowC/C1.json)
+[ARS](https://arax.ncats.io/?r=d206d96a-635d-4749-a0af-384d9b9b6eb8), [ARAX](https://arax.ncats.io/?r=33608), [JSON](https://github.com/NCATSTranslator/minihackathons/blob/main/2021-12_demo/workflowC/C1.json)
 
 Literature shows a vast number of medications that have been considered to treat IMIDs. However, the team was interested in seeing real world use of drugs for IMIDs: approved and off-label. Structured EHR data does not track _why_ a drug is prescribed (it's usually obvious to other clinicians) and unusual treatments are explained in free text notes. If you looked only co-occurance rates of drugs in patients with scleroderma, you&#39;ll see a vast list, starting with things like acetaminophen (Tylenol) because it&#39;s commonly used by patients in general. Translator has EHR-derived knowledge about which drugs that are **likely to be related** to a specific disease. These might be disease modifying drugs, or medications that treats symptoms or secondary conditions related to the disease.
 
@@ -29,7 +29,7 @@ They are interested to see it's also being used in patients with **systemic scle
 
 ## SME User Scenario 2
 
-**Dr. Sergio Baranzini, PhD** is a biomedical expert in Multiple Sclerosis. There have been great advances in treating multiple sclerosis exacerbations, but not in stopping the underlying progressive demyelination on nerves. Dr. Baranzini is interested in drugs that interact with the central nervous systems (CNS) myelination gene pathways. A paper that came out this year included a list of eight candidates for drug repurposing for progressive multiple sclerosis. He would like to see whether/how these drugs connect with CNS myelination pathways.
+**Dr. Sergio Baranzini, PhD** is a biomedical expert in Multiple Sclerosis. There have been great advances in treating multiple sclerosis exacerbations, but not in stopping the underlying progressive demyelination on nerves. Dr. Baranzini is interested in drugs that interact with the central nervous systems (CNS) myelination gene pathways. A recent [paper](https://pubmed.ncbi.nlm.nih.gov/31100209) included a list of eight candidates for drug repurposing for progressive multiple sclerosis. He would like to see whether/how these drugs connect with CNS myelination pathways.
 
 ### Query C2: Investigating whether drug repurposing candidates connect to CNS myelination
 
