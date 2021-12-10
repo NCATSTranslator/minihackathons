@@ -18,7 +18,7 @@ _Immune-mediated inflammatory diseases (IMIDs)_
 
 [ARS](https://arax.ncats.io/?r=d206d96a-635d-4749-a0af-384d9b9b6eb8), [ARAX](https://arax.ncats.io/?r=33608), [JSON](https://github.com/NCATSTranslator/minihackathons/blob/main/2021-12_demo/workflowC/C1.json)
 
-Literature shows a vast number of medications that have been considered to treat IMIDs. However, the team was interested in seeing real world use of drugs for IMIDs: approved and off-label. Structured EHR data does not track _why_ a drug is prescribed (it's usually obvious to other clinicians) and unusual treatments are explained in free text notes. If you looked only co-occurance rates of drugs in patients with scleroderma, you&#39;ll see a vast list, starting with things like acetaminophen (Tylenol) because it&#39;s commonly used by patients in general. Translator has EHR-derived knowledge about which drugs that are **likely to be related** to a specific disease. These might be disease modifying drugs, or medications that treats symptoms or secondary conditions related to the disease.
+Literature shows a vast number of medications that have been considered to treat IMIDs. However, the team wants to see real world use of drugs for IMIDs: approved and off-label. Structured EHR data does not track _why_ a drug is prescribed because it's usually obvious to other clinicians, and unusual treatments are explained only in free text notes. If you looked only co-occurance rates of drugs in patients with scleroderma, you&#39;ll see a vast list, with things like acetaminophen (Tylenol) because it&#39;s commonly used by patients in general. Translator has EHR-derived knowledge about which drugs that are **likely to be related** to a specific disease. These might be disease modifying drugs, or medications that treats symptoms or secondary conditions related to the disease.
 
 Choose Aragorn, ARAX: The team is familiar with thousands of drugs and can quickly scan through them. **Note**: methotrexate, dexamethasone and sulfasalazine are common immunomodulatory drugs used to treat many IMIDs.
 
@@ -39,16 +39,12 @@ Aragorn or ARAX. Choose **clemastine**. Click on edge to STAT3. This is now in c
 
 Choose **nimodipine**. Click on the edges to multiple sclerosis. SME thinks the mechanism of action makes sense. See nimodipine note on **PMID:28381594**. Nimodipine fosters remyelination in a mouse model.
 
-Optional: BTE list, see by genes, click on STAT3.
-
 ### Query C3: Investigation of potential candidates connected to CNS myelination
 
 [latest ARS](https://arax.ncats.io/?r=f070eda1-5095-4587-b021-3a5831d6b5ea), [ARAX](https://arax.ncats.io/?r=32966), [JSON](https://github.com/NCATSTranslator/minihackathons/blob/main/2021-12_demo/workflowC/C3.json)
 
 Translator independently finds both existing drugs and several that experts suggested, including: metformin and tamoxifen.
 
-It also found a calcium channel blockers similar to nimodipine. Note (surfaced earlier by Translator,and possiblu used in ranking, but not shown directly in demo): there is new evidence for nimodipine in mouse models: [PMID 33709265](https://pubmed.ncbi.nlm.nih.gov/33709265).
-
-Optional: Click on edge between MS and MAG, showing BTE, including TextMiner through Service Provider. Scroll down to see PMIDs.
-
 The SME is intrigued by **quercetin** (which is plant-based), and **dasatinib** (a tyrosine kinase inhibitor), and will be investigating further.
+
+Optional: Sometimes, nifedipine or another calcium channel blockers are in the results from some ARAs. There is new evidence for nimodipine in mouse models: [PMID 33709265](https://pubmed.ncbi.nlm.nih.gov/33709265).
