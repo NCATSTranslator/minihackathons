@@ -16,7 +16,7 @@ _Immune-mediated inflammatory diseases (IMIDs)_
 
 ### Query C1: Team looking at drugs used for patients with IMIDs
 
-[ARS](https://arax.ncats.io/?r=d206d96a-635d-4749-a0af-384d9b9b6eb8), [ARAX](https://arax.ncats.io/?r=33608), [JSON](https://github.com/NCATSTranslator/minihackathons/blob/main/2021-12_demo/workflowC/C1.json)
+[ARS](https://arax.ncats.io/?r=57562ed8-edd0-4aa4-bfd0-d87f040de56e), [ARAX](https://arax.ncats.io/?r=33982), [JSON](https://github.com/NCATSTranslator/minihackathons/blob/main/2021-12_demo/workflowC/C1.json)
 
 Literature shows a vast number of medications that have been considered to treat IMIDs. However, the team wants to see real world use of drugs for IMIDs: approved and off-label. Structured EHR data does not track _why_ a drug is prescribed because it's usually obvious to other clinicians, and unusual treatments are explained only in free text notes. If you looked only co-occurance rates of drugs in patients with scleroderma, you&#39;ll see a vast list, with things like acetaminophen (Tylenol) because it&#39;s commonly used by patients in general. Translator has EHR-derived knowledge about which drugs that are **likely to be related** to a specific disease. These might be disease modifying drugs, or medications that treats symptoms or secondary conditions related to the disease.
 
@@ -33,7 +33,7 @@ They are interested to see it's also being used in patients with **systemic scle
 
 ### Query C2: Investigating whether drug repurposing candidates connect to CNS myelination
 
-[ARS with BTE ](https://arax.ncats.io/?r=5a1e4475-e01c-4f5d-b86a-efda20dddbe9), [older ARS with Aragon ](https://arax.ncats.io/index.html?r=aa62c8b3-d934-4b2f-ac11-2ce0c2c719a1), [ARAX](https://arax.ncats.io/index.html?r=32963), [JSON](https://github.com/NCATSTranslator/minihackathons/blob/main/2021-12_demo/workflowC/C2.json)
+[ARS](https://arax.ncats.io/?r=67edf2a5-5f29-4050-80f7-67f8b87dcdab), [ARAX](https://arax.ncats.io/?r=33983), [JSON](https://github.com/NCATSTranslator/minihackathons/blob/main/2021-12_demo/workflowC/C2.json)
 
 Aragorn or ARAX. Choose **clemastine**. Click on edge to STAT3. This is now in clinical trials for remyelination.
 
@@ -41,7 +41,7 @@ Choose **nimodipine**. Click on the edges to multiple sclerosis. SME thinks the 
 
 ### Query C3: Investigation of potential candidates connected to CNS myelination
 
-[latest ARS](https://arax.ncats.io/?r=f070eda1-5095-4587-b021-3a5831d6b5ea), [ARAX](https://arax.ncats.io/?r=32966), [JSON](https://github.com/NCATSTranslator/minihackathons/blob/main/2021-12_demo/workflowC/C3.json)
+[ARS](https://arax.ncats.io/?r=14f6b890-98fe-4fba-9b41-4a3113de1ab4), [ARAX](https://arax.ncats.io/?r=33984), [JSON](https://github.com/NCATSTranslator/minihackathons/blob/main/2021-12_demo/workflowC/C3.json)
 
 Translator independently finds both existing drugs and several that experts suggested, including: metformin and tamoxifen.
 
